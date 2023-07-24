@@ -1,0 +1,635 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swapf');
+ 
+/* CSS Reset */
+html {
+  width: 100%;
+  height: 100%;
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+ 
+body {
+  margin: 0;
+  color: #fff;
+}
+
+main {
+  display: block;
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin: 0.67em 0;
+}
+
+ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+a, a:visited {
+  color: #fff;
+}
+input { all: unset; }
+input::-webkit-input-placeholder {font-size: 0.9rem;}
+button{
+  all: unset;
+  background: #E16129;
+  width: 120px;
+  min-width: fit-content;
+  padding: 10px;
+  text-align: center;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  border: 0.02rem solid #794757;
+}
+/* Default Font Sizes */
+html {
+	font-size: 15px; 
+}
+@media (min-width:321px) { 
+  html {
+    font-size: 16px; 
+  }
+}
+@media (min-width:420px) { 
+  html {
+    font-size: 17px; 
+  }
+}
+@media (min-width:481px) { 
+  html {
+    font-size: 18px; 
+  }
+}
+@media (min-width:768px) { 
+  html {
+    font-size: 17px; 
+  }
+}
+@media (min-width:1024px) { 
+  html {
+    font-size: 15px; 
+  }
+}
+@media (min-width:1200px) { 
+  html {
+    font-size: 16px; 
+  }
+}
+@media (min-width:1600px) { 
+  html {
+    font-size: 17px; 
+  }
+}
+/* Page Styles */
+/* Mobile First *
+
+/* General Styles */
+body {
+  background-color: #0b0b0e;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+ 
+}
+section {
+  box-sizing: border-box;
+  position: relative;
+  min-height: 100vh;
+  height: auto;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.flex{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content{
+  text-align: center;
+}
+.content h1{
+  margin-bottom: 0.3em;
+  text-align: center;
+}
+/* Specific Styles */
+
+/* Cover Section */
+#cover{
+  align-items: end;
+  background-color: #301c34;
+  background-image: url('/assets/images/dubai-skyline-bcg.jpg');
+  background-position: center;
+}
+#cover .content {
+  margin: 40px auto 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#cover .content h1{
+  font-size: 1.5rem;
+  margin-bottom: 0;
+  backdrop-filter: blur(2px);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.645);
+  border-radius: 50px;
+}
+#cover .content p{
+  font-size: 0.8rem;
+  font-style: normal;
+  color: #dc7140;
+  color: #fff;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+  position: relative;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.645);
+}
+#cover .content p span{
+  display: block;
+}
+#cover .content button{
+  margin-top: 0.5rem;
+  font-weight: 600;
+  width: 150px;
+}
+/* Developers Section */
+#developers{
+  /* background: rgba(37, 20, 40, 0.90); */
+  background-color: #251428;
+    background-image: url('/assets/images/advantages-bcg.png');
+}
+#developers .content{
+  margin: 4rem auto;
+}
+
+.developers-list{
+  flex-direction: column;
+  margin-top: 2rem;
+}
+.developers-list li{
+  width: 360px;
+  max-width: 90%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 2rem auto 4rem;
+
+}
+.developers-list .dev-logo-wrapper{
+  background-color: #000;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 100%;
+  overflow: hidden;
+  border: 2px solid #E16129;
+}
+.developers-list .dev-logo-wrapper img{
+  width: 100%;
+  height: auto;
+}
+.dev-desc{
+  margin: 1rem auto 1rem;
+}
+/* Projects Section */
+#projects{
+  background-image: url('/assets/images/projects-bcg.jpg');
+}
+
+#projects .content{
+  height: 100vh;
+  height: auto;
+  width: 100%;
+}
+
+#projects .content #slider-container {
+  width: 95%;
+  max-width: 1040px;
+  border-radius: 20px;
+  margin: 10px auto;
+}
+#projects .content #slider-container .slides-lists .slide{
+  display: flex;
+  flex-direction: column;
+  padding: 30px 14px;
+  background: #251428;
+}
+#projects .content #slider-container  .asset-info {
+  /* max-width: 70%; */
+  margin: 0 auto;
+  text-align: left;
+}
+#projects  .image-container {
+  height: 77%;
+  min-height: 300px;
+} 
+#projects  .image-container div {
+  height: 100%;
+  min-height: 280px;
+  width: auto;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+/* #projects #slider-container .slide .image-container img{
+  width: 70%;
+} */
+#projects .slide-content .asset-info span{
+  padding: 2px 6px;
+  background-color: #fff;
+  color: #000;
+}
+#projects .slide-content .asset-info p {
+  display: inline-block;
+  margin: 0.5em 0;
+}
+#projects .slide-content .asset-desc p {
+  text-align: left;
+  font-size: 0.85rem;
+}
+#projects .slide-images .images-list ul{
+ margin: 10px 0 0;
+ display: flex;
+}
+#projects .splide__list {
+  align-items: center;
+}
+#projects .slide-images .images-list img{
+  width: 100%;
+  height: auto;
+}
+#projects .images-list .splide__arrow svg{
+  -webkit-filter: invert(100%);
+    filter: invert(100%);
+}
+#projects .images-list .splide__arrow{
+  background-color: transparent;
+}
+ 
+#projects .images-list  .splide__track  {
+  width: 90%;
+  margin: 0 auto;
+}
+#projects  .images-list .splide__arrow--prev{
+  left: -0.2rem;
+}
+
+#projects  .images-list .splide__arrow--next{
+  right: -0.2rem;
+}
+/* Advantages Section */
+#advantages{
+  background-color: #251428;
+  background-image: url('/assets/images/advantages-bcg.png');
+}
+#advantages .content{
+  max-width: 90%;
+  margin: 4rem 0;
+}
+#advantages .advtg-desc{
+  font-size: 0.94rem;
+  line-height: 1.3rem;
+}
+.advantages-list{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.advantages-list li{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.advantages-list li h2{
+  margin: 1rem 0 0.5rem;
+  font-weight: 400;
+}
+.advantages-list li img{
+  width: auto;
+  height: 5rem;
+}
+.advantages-list li p{
+  margin: 0.5em auto;
+  font-size: 0.86rem;
+  line-height: 1.2rem;
+  max-width: 92%;
+}
+/* Contact Section */
+#contact{
+  background-color: #E16129;
+}
+#contact:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  background-image: url('/assets/images/dubai-skyline-bcg.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+}
+#contact .content {
+  background-color: #251428;
+  z-index: 1;
+  text-align: left;
+  height: 100%;
+  width: 390px;
+  max-width: 93%;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* padding: 15px 10px; */
+  padding: 1rem;
+  margin: 1rem 0;
+  box-sizing: border-box;
+}
+
+#contact .content  .contact-container{
+  display: flex;
+  margin: 2rem 0;
+  flex-direction: column;
+}
+
+#contact .content h1 span{
+  display: block;
+  text-align: center;
+}
+#contact .profile{
+  display: flex;
+  align-items: center;
+}
+#contact .agent-info{
+  margin-left: 1rem;
+  /* font-size: 1.2rem; */
+}
+#contact .agent-info h3, 
+#contact .agent-info p{
+  margin: 0.2rem;
+  white-space: nowrap;
+}
+#contact .profile img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+}
+#contact .contact-details{
+  justify-content: start;
+}
+#contact .contact-details a{
+  text-decoration: none;
+  display: block;
+  margin-bottom: 10px;
+}
+#contact .contact-details a img{
+  width: 3rem;
+  margin: 0 0.5rem;
+}
+#contact .adress p{
+  margin: 0.3rem;
+  font-size: 0.8rem;
+  line-height: 1.1rem;
+}
+#contact .form form{
+  display: flex;
+  flex-direction: column;
+}
+#contact .form form input{
+  margin-bottom: 1em;
+  border-radius: 5px;
+  height: 1.5em;
+  background-color: #fff;
+  color: #251428;
+  padding: 5px 4px;
+}
+#contact form button {
+  width: 120px;
+  padding: 10px;
+  margin: 0 auto;
+  color: #000;
+  font-weight: 600;
+}
+#contact .profile, #contact .adress{
+  margin-bottom: 10px;
+}
+#contact .contact-details{
+  margin: 1.5rem auto 0;
+}
+
+/* Desktop Styles */
+
+@media (min-width:1024px) { 
+  /* General */
+  section {
+    height: 100vh;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+  button:hover{
+    background-color: #e16129e8;
+    transition: 0.5s;
+  }
+  /* Cover Section */
+  #cover .content h1{
+    font-size: 2rem;
+    transition: none;
+  }
+  #cover .content p span{
+    display: initial;
+  }
+  #cover .content p::before,
+  #cover .content p::after{
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 20px;
+    background-color: #E3642A;
+    background-color: #fff;
+  }
+  #cover .content p::before{
+    left: -25px;
+    top: 45%;
+  }
+  #cover .content p::after{
+    right: -25px;
+    top: 45%;
+  }
+/* Developers Section */
+  #developers .content {
+    width: 1300px;
+  }
+  .developers-list{
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-top: 70px;
+  }
+  .developers-list li{
+    width: 18rem;
+    margin: 2rem 1.5rem 4rem;
+  }
+  .dev-desc {
+    height: 14rem;
+  }
+  /* Projects Section */
+  #projects .content #slider-container .slides-lists .slide{
+    flex-direction: row;
+    padding: 2.4rem;
+    border-radius: 20px;
+  }
+  
+  #projects .content #slider-container  .slide-images,
+  #projects .content #slider-container  .slide-content{
+    width: 50%;
+  }
+  #projects .content #slider-container .slide-content {
+    width: 50%;
+    padding-left: 2rem;
+  }
+  #projects #slider-container .slide  .images-list {
+    margin: 2rem 0 0;
+  }
+  #projects #slider-container .slide .image-container img {
+    width: 100%;
+  }
+  #projects #slider-container .slide .slide-content h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    text-align: left;
+  }
+  #projects #slider-container .slide .slide-content button{
+    float: left;
+  }
+  #projects  .splide__arrow--prev {
+    left: -3rem;
+  }
+  #projects  .splide__arrow--next {
+      right: -3rem;
+  }
+
+  #projects  .splide__pagination{
+    bottom: -2rem;
+  }
+  /* Advantages Section */
+  #advantages .content{
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+  .advantages-list{
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: baseline;
+    margin-top: 6.3rem;
+  }
+  #advantages .advtg-desc,
+  .advantages-list  li p{
+    font-size: 0.95rem;
+    line-height: 1.2rem;
+  }
+
+  #advantages .advtg-desc{
+    max-width: 51rem;
+    margin: 1.5rem auto 2rem;
+  }
+  .advantages-list li{
+    max-width: 20%;
+    margin: 0 2%;
+  }
+  .advantages-list li h2 {
+    margin: 1.5rem 0 1.2rem;
+    border-radius: 25px 0px;
+    border-radius: 15px;
+    border: 2px solid #DD6223;
+    background: #DD6223;
+    padding: 2px 10px;
+    min-width: 200px;
+  }
+  /* Contact Section */
+  #contact .content {
+    height: auto;
+    width: 50rem;
+    border-radius: 100px;
+    padding: 2rem 4rem;
+  }
+
+  #contact .content  .contact-container{
+    width: 90%;
+    flex-direction: row;
+    margin-bottom: 3rem;
+  }
+  #contact .contact-details{
+    margin: 0.8rem 0;
+  }
+  #contact .content .form{
+    width: 52%;
+    min-width: 280px;
+    padding: 0 0 0 1.5rem;
+  }
+  #contact .content .form h2{
+    margin-top: 0.3em;
+ }
+  #contact .content .agent{
+    width: 48%;
+    min-width: 300px;
+    padding: 0 1.5rem 0 0;
+  }
+  #contact .profile{
+    margin-bottom: 2rem;
+  }
+  #contact form button{
+   margin: 0.5rem auto 0 0;
+  }
+}
+
+
+/* Background Images Adjustments for Desktop Screens*/
+@media (min-aspect-ratio: 4/5) {
+  #projects, #advantages, #developers{
+    background-size: 100%;
+  }
+}
+@media (min-aspect-ratio: 110/85) {
+  #cover{
+    background-size: 100%;
+  }
+}
+/* @media (min-aspect-ratio: 6/5) {
+  
+  #cover{
+    background-size: 100%;
+  }
+} */
+@media (max-aspect-ratio: 10/8) {
+  #projects, #advantages, #developers{
+    background-size: auto 100% ;
+  }
+}
+@media (min-aspect-ratio: 19/10) {
+  #cover{
+    /* background-position: center -35vh; */
+    background-position: bottom -31vh center;
+  }
+  #projects, #advantages, #developers{
+    background-size: 100% auto;
+  }
+
+}
