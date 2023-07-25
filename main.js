@@ -35,11 +35,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
  
  /*Adding Action(Next Slide/Section) to buttons in each section */
-  document.querySelectorAll('#cover-cta, #developers button, .contact-label').forEach(button => {
-    button.addEventListener('click', function() {
-        fps.nextSlide();
-    } )
-  })
+  // document.querySelectorAll('#cover-cta, #developers button, .contact-label').forEach(button => {
+  //   button.addEventListener('click', function() {
+  //       fps.nextSlide();
+  //   } )
+  // })
 
 
  /*Projects Section Main Gallery/Slider init with SPlide */
@@ -85,7 +85,9 @@ document.addEventListener("DOMContentLoaded", function() {
     ctaButtonsList.addEventListener('click', cta => {
       const projectTitle =  cta.target.parentElement.getElementsByTagName('h3')[0].innerHTML;
       document.querySelector('#contact #projectn').value  = 'Interested in ' + projectTitle;
-      fps.goToSlide(4)
+      const contactSection = document.getElementById("contact");
+      contactSection.scrollIntoView();
+      //fps.goToSlide(4)
       // console.log(    document.querySelector('#contact #projectn'))
     })
   })
