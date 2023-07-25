@@ -219,6 +219,7 @@ section {
   flex-direction: column;
   padding: 30px 14px;
   background: #251428;
+  min-height: 930px;
 }
 #projects .content #slider-container  .asset-info {
   /* max-width: 70%; */
@@ -276,13 +277,31 @@ section {
   width: 90%;
   margin: 0 auto;
 }
-#projects  .images-list .splide__arrow--prev{
-  left: -0.2rem;
+.splide__track--nav>.splide__list>.splide__slide.is-active{
+  border: none;
 }
-
+.splide__arrow--prev, .splide__arrow--next{
+  opacity: 1;
+  top: 43%;
+}
+.splide__arrow--prev {
+  left: 0em;
+}
+.splide__arrow--next{
+  right: 0em;
+}
+#projects  .images-list .splide__arrow--prev, #projects  .images-list .splide__arrow--next{
+  opacity: 1;
+  top: 50%;
+}
+#projects  .images-list .splide__arrow--prev{
+  left: -0.5rem;
+}
 #projects  .images-list .splide__arrow--next{
   right: -0.2rem;
 }
+
+
 /* Advantages Section */
 #advantages{
   background-color: #251428;
@@ -324,6 +343,9 @@ section {
   font-size: 0.86rem;
   line-height: 1.2rem;
   max-width: 92%;
+}
+.contact-label{
+  display: none;
 }
 /* Contact Section */
 #contact{
@@ -494,6 +516,7 @@ section {
     flex-direction: row;
     padding: 2.4rem;
     border-radius: 20px;
+    min-height: auto;
   }
   
   #projects .content #slider-container  .slide-images,
@@ -519,6 +542,9 @@ section {
   #projects #slider-container .slide .slide-content button{
     float: left;
   }
+  .splide__arrow--prev, .splide__arrow--next{
+    top: 50%;
+  }
   #projects  .splide__arrow--prev {
     left: -3rem;
   }
@@ -538,7 +564,13 @@ section {
     flex-direction: row;
     justify-content: space-around;
     align-items: baseline;
-    margin-top: 6.3rem;
+    margin: 6.3rem 0;
+  }
+  .contact-label{
+    display: block;
+    font-size: 1.2rem;
+    text-decoration: underline;
+    cursor: pointer;
   }
   #advantages .advtg-desc,
   .advantages-list  li p{

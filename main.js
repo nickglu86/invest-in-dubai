@@ -9,9 +9,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
  
  /*Adding Action(Next Slide/Section) to buttons in each section */
-  document.querySelectorAll('#cover-cta, #developers button').forEach(button => {
+  document.querySelectorAll('#cover-cta, #developers button, .contact-label').forEach(button => {
     button.addEventListener('click', function() {
-      console.log('clicked')
         fps.nextSlide();
     } )
   })
@@ -59,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function() {
   document.querySelectorAll('#projects .slide-content button').forEach( ctaButtonsList => {
     ctaButtonsList.addEventListener('click', cta => {
       const projectTitle =  cta.target.parentElement.getElementsByTagName('h3')[0].innerHTML;
-      document.querySelector('#contact #projectn').value  = 'Intrested in ' + projectTitle;
+      document.querySelector('#contact #projectn').value  = 'Interested in ' + projectTitle;
       fps.goToSlide(4)
       // console.log(    document.querySelector('#contact #projectn'))
     })
