@@ -6,6 +6,7 @@ html {
   height: 100%;
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
+  scroll-behavior: smooth;
 }
  
 body {
@@ -43,6 +44,104 @@ button{
   cursor: pointer;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   border: 0.02rem solid #794757;
+}
+/* Navigation */
+#nav {
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+  /* display: flex; */
+  height: auto;
+
+  background-color: #000000ba;
+}
+#nav .nav-list{
+  display:none;
+  height: 101vh;
+  padding-top: 6rem;
+}
+#nav.open .nav-list{
+  display:block;
+}
+#nav a{
+  display: block;
+  font-size: 2rem;
+  margin: 3rem 1rem;
+  text-decoration: none;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.645);
+}
+#nav .mob_menu_btn{
+  position: absolute;
+  top: 0;
+  width: 29px;
+  height: 30px;
+  z-index: 9999;
+  right: 1%;
+  display: block;
+  margin: 1rem;
+}
+#nav .mob_menu_btn::after,
+#nav .mob_menu_btn::before,
+#nav .mob_menu_btn span {
+  content: "";
+  position: absolute;
+  width: 100%;
+  display: block;
+  height: 2px;
+  right: 0;
+  background: #fff;
+  transform: rotate(0deg);
+  transition: 0.5s all ease;
+  border-radius: 5px;
+}
+#nav .mob_menu_btn span {
+  top: 13px;
+  width: 100%;
+}
+#nav .mob_menu_btn:before {
+  top: 0px;
+}
+#nav .mob_menu_btn:after {
+  top: 25px;
+}
+
+#nav.open .mob_menu_btn:before {
+  transform: rotate(45deg);
+  top: 14px;
+  right: -4px;
+}
+#nav.open  .mob_menu_btn span {
+  opacity: 0;
+}
+#nav.open  .mob_menu_btn:after {
+  transform: rotate(-45deg);
+  top: 14px;
+  right: -4px;
+}
+/* Nav for Desktop */
+@media (min-width:1024px) { 
+  #nav{
+    background-color: #0000000f;
+  }
+  #nav .nav-list{
+    display: block;
+    height: 4rem;
+    padding-top: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+  #nav a{
+    display: block;
+    font-size: 1rem;
+    margin: 0.2rem 0;
+
+  }
+  #nav .mob_menu_btn{
+    display: none;
+  }
 }
 /* Default Font Sizes */
 html {
@@ -210,7 +309,7 @@ section {
 
 #projects .content #slider-container {
   width: 95%;
-  max-width: 1040px;
+  max-width: 480px;
   border-radius: 20px;
   margin: 10px auto;
 }
@@ -512,6 +611,11 @@ section {
     height: 14rem;
   }
   /* Projects Section */
+  #projects .content #slider-container {
+    max-width: 1040px;
+  }
+
+
   #projects .content #slider-container .slides-lists .slide{
     flex-direction: row;
     padding: 2.4rem;
@@ -651,8 +755,11 @@ section {
   }
 } */
 @media (max-aspect-ratio: 10/8) {
-  #projects, #advantages, #developers{
+  #advantages, #developers{
     background-size: auto 100% ;
+  }
+  #projects{
+    background-size: 100% 100% ;
   }
 }
 @media (min-aspect-ratio: 19/10) {

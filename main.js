@@ -1,7 +1,33 @@
 import './style.css'
  
 
+
+
 document.addEventListener("DOMContentLoaded", function() {
+
+  const toggleNav = () => {
+    var x = document.getElementById("nav");
+    if (x.className === "topnav") {
+      x.className += " open";
+    } else {
+      x.className = "topnav";
+    }
+  }
+  
+  document.querySelector('.mob_menu_btn').addEventListener(
+    'click', () => toggleNav()
+  
+  )
+  document.querySelector('#nav .nav-list').addEventListener( 
+     'click', () => {
+      var nav = document.getElementById("nav");
+       nav.classList.contains('open') ? toggleNav() : null;
+       document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+    });
+     }
+  )
+
   var fps = new FullPageScroll('container', { 
       // options here
       mediaQuery: 'screen and (min-width: 940px)',
