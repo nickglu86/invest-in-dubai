@@ -223,7 +223,7 @@ section {
 #cover{
   align-items: end;
   background-color: #301c34;
-  background-image: url('/assets/images/dubai-skyline-bcg-mobile-2.png');
+  background-image: url('/assets/images/dubai-skyline-bcg-mobile.jpg');
   background-position: center;
 }
 @media (min-width:640px) { 
