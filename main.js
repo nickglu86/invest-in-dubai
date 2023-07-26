@@ -95,3 +95,58 @@ document.addEventListener("DOMContentLoaded", function() {
   
 });
 
+const contactForm = document.querySelector('form');
+
+contactForm.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  showSpinner();
+  const data = new FormData(contactForm);
+
+  fetch("https://getform.io/f/e0c95d7f-047b-4bcf-851a-22223ac923bf", {
+      method: "POST",
+      body: data,
+      headers: {
+          "Accept": "application/json",
+      },
+  })
+  .then(response => {
+    if(response.ok){
+      formSuccess();
+    }
+  })
+  .catch(error => {
+    formError();
+    console.log(error)
+  })
+})
+
+
+
+const formElem = document.querySelector('.form form');
+const spinner = document.querySelector('.spinner');
+const successElem = document.querySelector('.form .success');
+const errorElem = document.querySelector('.form .error');
+
+const showSpinner = () => {
+ formElem.style.display = 'none';
+ spinner.style.display = 'flex';
+}
+
+const formSuccess = () => {
+  spinner.style.display = 'none';
+  successElem.style.display = 'block';
+}
+
+const formError = () => {
+  spinner.style.display = 'none';
+  errorElem.style.display = 'block';
+}
+
+const tryAgain = () => {
+  errorElem.style.display = 'none';
+  contactForm.reset();
+  formElem.style.display = 'flex';
+}
+
+const tryAgainBtn = document.querySelector('.form .error button');
+tryAgainBtn.addEventListener('click', tryAgain)
