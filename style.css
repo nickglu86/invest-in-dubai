@@ -329,6 +329,7 @@ section {
   max-width: 480px;
   border-radius: 20px;
   margin: 10px auto;
+  padding-bottom: 3rem;
 }
 #projects .content #slider-container .slides-lists .slide{
   display: flex;
@@ -336,6 +337,7 @@ section {
   padding: 30px 14px;
   background: #251428;
   height: fit-content;
+  border-radius: 20px;
 }
 #projects .content #slider-container  .asset-info {
   /* max-width: 70%; */
@@ -377,12 +379,13 @@ section {
 }
 #projects  .image-container {
   height: 77%;
-  min-height: 300px;
+  min-height: 210px;
 } 
+
 #projects  .image-container div {
-  height: 100%;
-  min-height: 280px;
-  width: auto;
+  height: auto;
+  min-height: 200px;
+  width: 100%;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -390,6 +393,9 @@ section {
 /* #projects #slider-container .slide .image-container img{
   width: 70%;
 } */
+#projects .splide__track.slides-lists{
+  border-radius: 20px;
+}
 #projects .slide-content .asset-info span{
   text-decoration: underline;
 }
@@ -419,6 +425,9 @@ section {
 #projects .splide__list {
   align-items: self-start;
 }
+#projects .splide__track--nav>.splide__list>.splide__slide{
+  display: flex;
+}
 #projects .slide-images .images-list img{
   width: 100%;
   height: auto;
@@ -443,7 +452,7 @@ section {
 }
 .splide__arrow--prev, .splide__arrow--next{
   opacity: 1;
-  top: 43%;
+  top: 35%;
 }
 .splide__arrow--prev {
   left: -4vw;
@@ -456,10 +465,10 @@ section {
   top: 50%;
 }
 #projects  .images-list .splide__arrow--prev{
-  left: -0.5rem;
+  left: -1rem;
 }
 #projects  .images-list .splide__arrow--next{
-  right: -0.5rem;
+  right: -1rem;
 }
 
 
@@ -718,6 +727,7 @@ section {
   /* Projects Section */
   #projects .content #slider-container {
     max-width: 1040px;
+    padding-bottom: 1rem;
   }
 
   #projects .splide__list {
@@ -726,7 +736,6 @@ section {
   #projects .content #slider-container .slides-lists .slide{
     flex-direction: row;
     padding: 2.4rem;
-    border-radius: 20px;
     min-height: auto;
   }
   
@@ -741,6 +750,14 @@ section {
   
   #projects #slider-container .slide  .images-list {
     margin: 2rem 0 0;
+  }
+  #projects  .image-container {
+    min-height: 300px;
+  } 
+  #projects  .image-container div {
+    height: 100%;
+    min-height: 280px;
+    width: auto;
   }
   #projects #slider-container .slide .image-container img {
     width: 100%;
