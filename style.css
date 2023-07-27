@@ -587,13 +587,13 @@ section {
   margin-bottom: 10px;
 }
 #contact .contact-details a img{
-  width: 3rem;
+  width: 2.8rem;
   margin: 0 0.5rem;
 }
 #contact .adress p{
   margin: 0.3rem;
-  font-size: 0.8rem;
-  line-height: 1.1rem;
+  font-size: 0.6rem;
+  line-height: 0.9rem;
 }
 #contact .form form{
   display: flex;
@@ -818,6 +818,12 @@ section {
     width: 90%;
     flex-direction: row;
     margin-bottom: 3rem;
+  }
+  #contact .contact-details a:first-child img{
+    margin-left: 0;
+  }
+  #contact .contact-details a:last-child img{
+    margin-right: 0;
   }
   #contact .contact-details{
     margin: 0.8rem 0;

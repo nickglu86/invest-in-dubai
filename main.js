@@ -1,4 +1,4 @@
-import './style.css'
+// import './style.css'
 import { projectsList } from './public/data/projects';
 import { projectsElem } from './public/js/utils';
 
