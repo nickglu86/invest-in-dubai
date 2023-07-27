@@ -1,23 +1,14 @@
 import './style.css'
  
-
-
-
+/* on DOMContentLoaded */
 document.addEventListener("DOMContentLoaded", function() {
 
+  /* Mobile Navigation/Hamburger */
   const toggleNav = () => {
-    var x = document.getElementById("nav");
-    if (x.className === "topnav") {
-      x.className += " open";
-    } else {
-      x.className = "topnav";
-    }
+    var nav = document.getElementById("nav");
+    nav.className === "topnav" ? nav.className += " open" :  nav.className = "topnav";
   }
-  
-  document.querySelector('.mob_menu_btn').addEventListener(
-    'click', () => toggleNav()
-  
-  )
+  document.querySelector('.mob_menu_btn').addEventListener('click', () => toggleNav());
   document.querySelector('#nav .nav-list').addEventListener( 
      'click', () => {
       var nav = document.getElementById("nav");
@@ -28,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
      }
   )
 
+  /* Section Page Scroll Animation  - fullpage-scroll.js */
   var fps = new FullPageScroll('container', { 
       // options here
       mediaQuery: 'screen and (min-width: 940px)',
@@ -95,6 +87,8 @@ document.addEventListener("DOMContentLoaded", function() {
   
 });
 
+
+/* Contact Form handler */
 const contactForm = document.querySelector('form');
 
 contactForm.addEventListener('submit', async (e) => {
@@ -119,8 +113,6 @@ contactForm.addEventListener('submit', async (e) => {
     console.log(error)
   })
 })
-
-
 
 const formElem = document.querySelector('.form form');
 const spinner = document.querySelector('.spinner');
@@ -152,27 +144,17 @@ const tryAgainBtn = document.querySelector('.form .error button');
 tryAgainBtn.addEventListener('click', tryAgain);
 
 
+
+/* Page fade anim effect in load on DOM Content Loaded */
 document.addEventListener("DOMContentLoaded", () => {
   window.setTimeout(function() {
     document.body.classList.remove('fade');
   }, 230);
 });
 
-// const appear = document.querySelector('.appear'); 
-// const cb = function(entries){
-//   entries.forEach(entry => {
-//     if(entry.isIntersecting){
-//       entry.target.classList.add('inview');
-//     }else{
-//       entry.target.classList.remove('inview');
-//     }
-//   });
-// }
-// const io = new IntersectionObserver(cb);
-// io.observe(appear);
 
+/* Page fade anim effect for sections scrolled into viewport */
 const items = document.querySelectorAll('.appear');
-
 const active = function(entries){
     entries.forEach(entry => {
         if(entry.isIntersecting){
