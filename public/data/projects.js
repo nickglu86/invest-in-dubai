@@ -71,8 +71,35 @@ export const projectsList = [
                   '330-riverside-crescent/pool.jpg',
             ]
       },
+      {
+            title : 'Emar - Creek Waters',
+            location: 'Dubai Creek Harbour',
+            type: '1,2, 3 & 4 Bedroom Apartments,\n TownHouses & PentHouses',
+            price: '1.7M AED / 462K USD',
+            desc: ['Combining modern architecture with innovative landscaping, Creek Waters sets a new standard for the high-rise island living experience. A natural haven in the heart of Dubai Creek’s new urban face. Sophisticated in its urban design, Creek Waters exemplifies the concept of bringing together in one place the best features of upmarket residential areas, boasting at the same time some of the best views in the whole Dubai Creek area.'],
+            thumbnailImg: 'creek-waters/cover.jpg',
+            images: [ 
+                  'creek-waters/3bed.jpg',
+                  'creek-waters/canal-view.jpg',
+                  'creek-waters/entrance.jpg',
+                  'creek-waters/finshing.jpg',
+                  'creek-waters/gym.jpg',
+                  'creek-waters/interior.jpg',
+                  'creek-waters/kitchen.jpg',
+                  'creek-waters/pool.jpg',
+                  'creek-waters/location.jpg',
+                  'creek-waters/paymnet-plan.png',
+            ]
+      },     
       
-      
+
+      // Emar - Rivana
+      // Emar - Creek Waters
+      // Emar -  Creek Harbour 
+      // Emar - Emaar South 
+      // Emar- Ranches 3
+      // Emar - Seapoint
+      // Emar - Ceda
       // {
       //       title : '',
       //       location: '',
