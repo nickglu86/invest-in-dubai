@@ -325,7 +325,7 @@ section {
 }
 
 #projects .content #slider-container {
-  width: 95%;
+  width: 92%;
   max-width: 480px;
   border-radius: 20px;
   margin: 10px auto;
@@ -401,10 +401,10 @@ section {
   top: 43%;
 }
 .splide__arrow--prev {
-  left: 0em;
+  left: -4vw;
 }
 .splide__arrow--next{
-  right: 0em;
+  right: -4vw;
 }
 #projects  .images-list .splide__arrow--prev, #projects  .images-list .splide__arrow--next{
   opacity: 1;
@@ -414,7 +414,7 @@ section {
   left: -0.5rem;
 }
 #projects  .images-list .splide__arrow--next{
-  right: -0.2rem;
+  right: -0.5rem;
 }
 
 
@@ -523,9 +523,16 @@ section {
   white-space: nowrap;
 }
 #contact .profile img {
-  width: 5rem;
-  height: 5rem;
+  width: 6rem;
+  height: 6rem;
   border-radius: 50%;
+}
+#contact  .agent-info img {
+  width: 70%;
+  height: auto;
+  border-radius: 2px;
+  padding: 0px 5px;
+  background-color: #251428;
 }
 #contact .contact-details{
   justify-content: start;
@@ -590,6 +597,13 @@ section {
   justify-content: center;
   transition: 1;
 }
+
+
+@media (min-width:720px) { 
+  #projects .content { 
+   max-width: 90vw;
+  }
+  }
 /* Desktop Styles */
 
 @media (min-width:1024px) { 
@@ -610,7 +624,7 @@ section {
     background-color: #e16129e8;
     transform: scale(1.01);
   }
-  
+
   /* Cover Section */
   #cover .content {
     margin: 40px auto 3rem;
