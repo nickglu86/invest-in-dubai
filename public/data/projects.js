@@ -2,7 +2,7 @@ export const projectsList = [
       {
             title : 'Sobha One',
             location: 'AT MBR CITY, Dubai',
-            price: '1.5M AED',
+            price: '1.5M AED / 408K USD',
             type: 'Grand 1, 2, 3 & 4 Bedroom Apartments',
             desc: ['Sobha One offers a skyline of five interlinked towers near the Ras Al Khor Road overlooking Dubai Creek with panoramic views of the Burj Khalifa. Explore now!',
                   'With a canvas spread over 1.5 million square feet, its breathtaking views as far as your eye can see. Look around to the view of the Golf Course, calm waters, and the iconic Burj Khalifa & Downtown. Every glance sets a different mood.'],
@@ -24,7 +24,7 @@ export const projectsList = [
       {
             title : 'Upside',
             location: 'Business Bay',
-            price: '980K AED',
+            price: '980K AED / 266K USD',
             type: 'Studio & 1 Bedroom Apartments ',
             desc: ['UPSIDE Living is an ultra-luxurious newly launched residential project by SRG. The elegantly constructed community with a distinctive character offers a modern lifestyle for the dreamers and the doers of the world. As of May 2023, the project is under construction, and has an estimated date of completion in May 2024.',
                   'The fully-furnished residences in the project will be presented by branded studios and one-bedroom apartments, with living areas ranging from 400 sq. ft to 650 sq. ft. There will be 20 units per floor, and all residences will provide breathtaking views of Downtown Dubai and Meydan. Investors will also be able to acquire a full floor property in UPSIDE Living.'],
@@ -43,7 +43,7 @@ export const projectsList = [
       {
             title : 'Sobha Hartland',
             location: 'AT MBR CITY',
-            price: '22.7M AED',
+            price: '22.7M AED / 6.1M US',
             type: '5 & 6 Bedroom Villas',
             desc: ['Sobha Estates is a private gated villa community comprising of three clusters within Sobha Hartland II. The community includes exclusive 5 & 6 bedroom 8000+ sq. ft. villas with 3 enclosed car parking and 3 floors, including a rooftop terrace and a spacious entrance court.'],
             thumbnailImg: 'sobha-hartland-estate/5br-type-b-2x.jpg',
@@ -55,14 +55,41 @@ export const projectsList = [
                   'sobha-hartland-estate/5br-type-c-2x.jpg'
             ]
       },
+      {
+            title : '330 Riverside Crescent',
+            location: 'SOBHA HARTLAND II',
+            type: ' 1, 1.5 and 2 Bedroom Apartments',
+            price: '1.5M AED / 410K USD',
+            desc: ['330 Riverside Crescent is your gateway to a waterfront lifestyle of beauty and tranquility. With 57 stories of exquisite craftsmanship, the tower stands poised offering uninterrupted views of the clear water and riveting illuminations of the city. Located at Sobha Hartland II, 330 Riverside Crescent is minutes away from Downtown Dubai and Dubai Creek Harbour and will offer specially designed residences of 1, 1.5 and 2 bedroom apartments exhibiting all-encompassing views.'],
+            thumbnailImg: '330-riverside-crescent/cover.jpg',
+            images: [ 
+                  '330-riverside-crescent/entrance.jpg',
+                  '330-riverside-crescent/indicative.jpg',
+                  '330-riverside-crescent/lagoon-1.jpg',
+                  '330-riverside-crescent/overview-2.jpg',
+                  '330-riverside-crescent/overview.jpg',
+                  '330-riverside-crescent/pool.jpg',
+            ]
+      },
       
       
       // {
-      //       name : '',
+      //       title : '',
       //       location: '',
-      //       propType: '',
+      //       type: '',
+      //       price: '',
       //       desc: [],
       //       thumbnailImg: '',
-      //       images: [ '', '', '', '', '', '', '', '', '']
-      // }
+      //       images: [ 
+      //             '',
+      //             '', 
+      //             '', 
+      //             '', 
+      //             '', 
+      //             '', 
+      //             '', 
+      //             '', 
+      //             ''
+      //       ]
+      // },
 ]
