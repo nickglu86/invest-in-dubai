@@ -46,6 +46,7 @@ button{
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   border: 0.02rem solid #794757;
 }
+
 /* Navigation */
 #nav {
   position: fixed;
@@ -69,7 +70,15 @@ button{
   margin: 3rem 1rem;
   text-decoration: none;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.645);
+
 }
+#nav .nav-list a{
+  transition: 0.05s;
+}
+#nav .nav-list a:hover{
+  transform: scale(1.05);
+}
+
 #nav .mob_menu_btn{
   position: absolute;
   top: 0;
@@ -187,7 +196,7 @@ html {
 
 /* General Styles */
 body {
-  background-color: #0b0b0e;
+  background-color: #3a2b3c;
   color: white;
   font-family: 'Montserrat', sans-serif;
  
@@ -587,14 +596,19 @@ section {
   /* General */
   section {
     height: 100vh;
+    min-height: 700px;
   }
 
   h1 {
     font-size: 2.2rem;
   }
-  button:hover{
+
+  button.cta{
+    transition: 0.01s;
+  }
+  button.cta:hover {
     background-color: #e16129e8;
-    transition: 0.5s;
+    transform: scale(1.01);
   }
   /* Cover Section */
   #cover .content {
@@ -831,4 +845,26 @@ section {
   100% {
     transform: rotate(360deg);
   }
+}
+
+body {
+  opacity: 1;
+  transition-duration: 0.7s;
+  transition-property: opacity;
+}
+
+body.fade {
+  opacity: 0;
+}
+
+.appear {
+  transition: all 0.6s;
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.appear.inview {
+  opacity: 1;
+  transform: none;
+  transition-delay: 0.2s;
 }
