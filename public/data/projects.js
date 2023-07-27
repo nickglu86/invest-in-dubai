@@ -60,7 +60,10 @@ export const projectsList = [
             location: 'SOBHA HARTLAND II',
             type: ' 1, 1.5 and 2 Bedroom Apartments',
             price: '1.5M AED / 410K USD',
-            desc: ['330 Riverside Crescent is your gateway to a waterfront lifestyle of beauty and tranquility. With 57 stories of exquisite craftsmanship, the tower stands poised offering uninterrupted views of the clear water and riveting illuminations of the city. Located at Sobha Hartland II, 330 Riverside Crescent is minutes away from Downtown Dubai and Dubai Creek Harbour and will offer specially designed residences of 1, 1.5 and 2 bedroom apartments exhibiting all-encompassing views.'],
+            desc:  [
+                  '330 Riverside Crescent is your gateway to a waterfront lifestyle of beauty and tranquility. With 57 stories of exquisite craftsmanship, the tower stands poised offering uninterrupted views of the clear water and riveting illuminations of the city.',
+                  'Located at Sobha Hartland II, 330 Riverside Crescent is minutes away from Downtown Dubai and Dubai Creek Harbour and will offer specially designed residences of 1, 1.5 and 2 bedroom apartments exhibiting all-encompassing views'
+            ],
             thumbnailImg: '330-riverside-crescent/cover.jpg',
             images: [ 
                   '330-riverside-crescent/entrance.jpg',
@@ -76,7 +79,9 @@ export const projectsList = [
             location: 'Dubai Creek Harbour',
             type: '1,2, 3 & 4 Bedroom Apartments,\n TownHouses & PentHouses',
             price: '1.7M AED / 462K USD',
-            desc: ['Combining modern architecture with innovative landscaping, Creek Waters sets a new standard for the high-rise island living experience. A natural haven in the heart of Dubai Creek’s new urban face. Sophisticated in its urban design, Creek Waters exemplifies the concept of bringing together in one place the best features of upmarket residential areas, boasting at the same time some of the best views in the whole Dubai Creek area.'],
+            desc: [
+                  'Combining modern architecture with innovative landscaping, Creek Waters sets a new standard for the high-rise island living experience.',
+                  'A natural haven in the heart of Dubai Creek’s new urban face. Sophisticated in its urban design, Creek Waters exemplifies the concept of bringing together in one place the best features of upmarket residential areas, boasting at the same time some of the best views in the whole Dubai Creek area.'],
             thumbnailImg: 'creek-waters/cover.jpg',
             images: [ 
                   'creek-waters/3bed.jpg',

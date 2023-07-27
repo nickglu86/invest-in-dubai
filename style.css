@@ -401,6 +401,7 @@ section {
 }
 #projects .slide-content .asset-info .price p {
   font-weight: 700;
+  padding-left: 0;
 }
 #projects .slide-content .asset-info p {
   display: inline-block;
