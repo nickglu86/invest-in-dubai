@@ -345,25 +345,27 @@ section {
 #projects .slide-content .asset-info .location p {
   color: #ffffffc2;
 }
-#projects .asset-info .location::before {
+#projects .asset-info .location::before,
+#projects .asset-info .price::before,
+#projects .asset-info .type::before{
   content: '';
   width: 20px;
   height: 20px;
   display: inline-block;
   background-size: contain;
   background-repeat: no-repeat;
+}
+#projects .asset-info .location::before {
   background-image: url('/assets/icons/location.png');
 }
 #projects .asset-info .price::before {
-  content: '';
-  width: 20px;
-  height: 20px;
-  display: inline-block;
-  background-size: contain;
-  background-repeat: no-repeat;
   background-image: url('/assets/icons/price.png');
 }
-
+#projects .asset-info .type::before{
+  width: 16px;
+  height: 16px;
+  background-image: url('/assets/icons/size.png');
+}
 #projects  .image-container {
   height: 77%;
   min-height: 300px;
