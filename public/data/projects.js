@@ -171,6 +171,9 @@ export const projectsList = [
                   '/emar-south/4.jpeg',
                   '/emar-south/5.jpeg',
                   '/emar-south/6.jpeg',
+                  '/emar-south/fairway-1.jpg',
+                  '/emar-south/fairway-2.jpg',
+                  '/emar-south/fairway-3.jpg',
                   '/emar-south/11.jpg',
                   '/emar-south/22.jpg',
                   '/emar-south/33.jpg',
@@ -180,7 +183,6 @@ export const projectsList = [
       },
  
  
-      // Emar - Emaar South 
       // Emar- Ranches 3
       // Emar - Seapoint
       // Emar - Ceda

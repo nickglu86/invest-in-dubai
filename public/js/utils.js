@@ -43,6 +43,7 @@ export const projectsElem  = {
                         const liElem = projectsElem.createElem("li", ['splide__slide']);
                         const imgElem = document.createElement('img');
                         imgElem.setAttribute('src', "assets/projects/" + image);
+                        imgElem.setAttribute('alt',  image.slice(image.lastIndexOf('/') +1));
                         liElem.appendChild(imgElem);
                         spliceList.appendChild(liElem);
                   }
@@ -59,6 +60,7 @@ export const projectsElem  = {
                         const liElem = projectsElem.createElem("li", ['thumbnail']);
                         const imgElem = document.createElement('img');
                         imgElem.setAttribute('src', "assets/projects/" + image);
+                        imgElem.setAttribute('alt',  image.slice(image.lastIndexOf('/') +1));
                         liElem.appendChild(imgElem);
                         spliceList.appendChild(liElem);
                   }
