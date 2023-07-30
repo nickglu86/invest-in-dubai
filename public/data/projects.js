@@ -75,7 +75,7 @@ export const projectsList = [
             ]
       },
       {
-            title : 'Emar - Creek Waters',
+            title : 'Emar Creek Waters',
             location: 'Dubai Creek Harbour',
             type: '1, 2, 3 & 4 Bedroom Apartments,\n TownHouses & PentHouses',
             price: '1.7M AED / 462K USD',
@@ -97,7 +97,7 @@ export const projectsList = [
             ]
       },     
       {
-            title : 'Emar - Rivana',
+            title : 'Emar Rivana',
             location: 'The Valley - Al Ain Road',
             type: '3, 4 AND 5-Bedroom Twin Villas',
             price: '2.8M AED / 763K USD',
@@ -182,10 +182,7 @@ export const projectsList = [
             ]
       },
  
- 
-      // Emar- Ranches 3
-      // Emar - Seapoint
-      // Emar - Ceda
+
       // {
       //       title : '',
       //       location: '',
