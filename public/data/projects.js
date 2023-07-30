@@ -77,7 +77,7 @@ export const projectsList = [
       {
             title : 'Emar - Creek Waters',
             location: 'Dubai Creek Harbour',
-            type: '1,2, 3 & 4 Bedroom Apartments,\n TownHouses & PentHouses',
+            type: '1, 2, 3 & 4 Bedroom Apartments,\n TownHouses & PentHouses',
             price: '1.7M AED / 462K USD',
             desc: [
                   'Combining modern architecture with innovative landscaping, Creek Waters sets a new standard for the high-rise island living experience.',
@@ -96,11 +96,90 @@ export const projectsList = [
                   'creek-waters/paymnet-plan.png',
             ]
       },     
-      
-
-      // Emar - Rivana
-      // Emar - Creek Waters
-      // Emar -  Creek Harbour 
+      {
+            title : 'Emar - Rivana',
+            location: 'The Valley - Al Ain Road',
+            type: '3, 4 AND 5-Bedroom Twin Villas',
+            price: '2.8M AED / 763K USD',
+            desc: [ 
+                  'A picturesque neighbourhood of stylish twin villas, Rivana combines comfort and modernity with beauty and serenity. Boasting a wide variety of indoor and outdoor retail options, as well as The Valley’s Golden Beach, verdant pocket parks, a local farmers’ market, and gourmet dining options, Rivana is where families can feel a true sense of belonging as integral members of a thriving community.',
+                  'With easy access to all major areas of Dubai and an array of green open spaces, The Valley is strategically located on the Dubai—Al Ain Road, a major connection point between the emirates of Dubai and Abu Dhabi.'
+            ],
+            thumbnailImg: 'valley.jpg',
+            images: [ 
+                  '/rivana/valley.jpg',
+                  '/rivana/valley-2.jpg',
+                  '/rivana/valley-3.jpg',
+                  '/rivana/valley-4.jpg',
+                  '/rivana/valley-5.jpg',
+                  '/rivana/valley-6.jpg',
+                  '/rivana/valley-7.jpg',
+                  '/rivana/inside.jpg',
+                  '/rivana/inside-2.jpg',
+                  '/rivana/inside-3.jpg',
+                  '/rivana/inside-4.jpg',
+                  '/rivana/inside-5.jpg',
+                  '/rivana/gym.jpg',
+                  '/rivana/bedroom.jpg',
+                  '/rivana/bathroom.jpg',
+                  '/rivana/area.jpg',
+                  '/rivana/8.jpg',
+            ]
+      },
+      {
+            title : 'Dubai Creek Harbour',
+            location: 'Dubai Creek Harbour',
+            type: '1, 2, 3 & 4 Bedroom Apartments,\n TownHouses & PentHouses',
+            price: '1.7M AED / 463K USD',
+            desc:  [ 
+                  "Dubai Creek Harbour is a stunning waterfront community located in the heart of Dubai, United Arab Emirates. It offers unparalleled views of the Dubai skyline and is home to some of the city's most iconic landmarks like the Dubai Creek Park, Dubai Creek Beach and the Dubai Creek Marina.",
+                  " With a perfect blend of residential, commercial, and leisure spaces, the area has become a favorite destination for both locals and tourists alike. The vibrant atmosphere, world-class amenities, and luxurious shopping and dining options make Dubai Creek Harbour a truly special place to live, work, and play."
+            ],
+            thumbnailImg: '/creek-harbour/cover.jpg',
+            images: [ 
+                  '/creek-harbour/cover.jpg',
+                  '/creek-harbour/1.jpeg',
+                  '/creek-harbour/2.jpg',
+                  '/creek-harbour/3.jpg',
+                  '/creek-harbour/creek-edge-1.jpg',
+                  '/creek-harbour/creek-edge-2.jpg',
+                  '/creek-harbour/creek-edge-3.jpg',
+                  '/creek-harbour/creek-gym.jpg',
+                  '/creek-harbour/creek-pool.jpg',
+                  '/creek-harbour/creek-palace-1.jpg',
+                  '/creek-harbour/creek-palace-2.jpg',
+                  '/creek-harbour/creek-surf-1.jpg',
+                  '/creek-harbour/creek-surf-2.jpg',
+            ]
+      },
+       {
+            title : 'Emaar South ',
+            location: 'Emaar South ',
+            type: '1, 2, 3 & 4 Bedroom Apartments',
+            price: '2M AED / 545K USD',
+            desc: [ 
+                  'Emaar South is a vibrant and fast-growing community located in strategic location near Al Maktoum International Airport and Expo 2020 site UAE. Offering a wide range of residential and commercial properties, Emaar South aims to provide its residents with a high-quality, luxurious lifestyle.',
+                  ' The community boasts numerous amenities including parks, swimming pools, fitness centers, & retail. With its, Emaar South is set to become a prominent hub for business, entertainment, and leisure activities.'
+            ],
+            thumbnailImg: '',
+            images: [ 
+                  '/emar-south/cover.jpg',
+                  '/emar-south/view.jpg/',
+                  '/emar-south/1.jpg',
+                  '/emar-south/2.jpg',
+                  '/emar-south/3.jpg',
+                  '/emar-south/4.jpeg',
+                  '/emar-south/5.jpeg',
+                  '/emar-south/6.jpeg',
+                  '/emar-south/11.jpg',
+                  '/emar-south/22.jpg',
+                  '/emar-south/33.jpg',
+                  '/emar-south/44.jpg',
+                  '/emar-south/66.jpg',
+            ]
+      },
+ 
+ 
       // Emar - Emaar South 
       // Emar- Ranches 3
       // Emar - Seapoint
