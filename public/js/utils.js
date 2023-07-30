@@ -33,12 +33,11 @@ export const projectsElem  = {
             imageElem.style = `background-image: url(assets/projects/${thumbnailImg})`;
             return imageElem;
       },
-      
-      createThumbCarousel: ({images}, index) => {
-            const thumbCarouselElem = projectsElem.createElem("div", ['images-list','splide', 'thumbnail-carousel']);
-            thumbCarouselElem.setAttribute('id', 'thumbnail-carousel-' + index +1)
-            const trackElem = projectsElem.createElem("div", ['splide__track']);
-            const spliceList = projectsElem.createElem("ul", ['splide__list','images-list']);
+      createImageContainer : ({images}, index) =>{
+            const imagesContainer =  projectsElem.createElem("div",['image-container','splide']);
+            imagesContainer.setAttribute('id', 'image-container-' + parseInt(index+1));
+            const slidetrack =  projectsElem.createElem("div",['splide__track']);
+            const spliceList = projectsElem.createElem("ul", ['splide__list']);
             images.forEach(
                   image => {
                         const liElem = projectsElem.createElem("li", ['splide__slide']);
@@ -48,9 +47,23 @@ export const projectsElem  = {
                         spliceList.appendChild(liElem);
                   }
             )
-            trackElem.appendChild(spliceList);
-             thumbCarouselElem.appendChild(trackElem);
-             return thumbCarouselElem;
+            slidetrack.appendChild(spliceList)
+            imagesContainer.appendChild(slidetrack)
+            return imagesContainer;
+      },
+      createThumbCarousel: ({images}, index) => {
+            const spliceList = projectsElem.createElem("ul", ['thumbnails']);
+            spliceList.setAttribute('id', 'thumbnail-carousel-' + parseInt(index+1))
+            images.forEach(
+                  image => {
+                        const liElem = projectsElem.createElem("li", ['thumbnail']);
+                        const imgElem = document.createElement('img');
+                        imgElem.setAttribute('src', "assets/projects/" + image);
+                        liElem.appendChild(imgElem);
+                        spliceList.appendChild(liElem);
+                  }
+            )
+             return spliceList;
 
       },
       createProjDesc: ({desc}) => {
@@ -76,15 +89,13 @@ export const projectsElem  = {
             contentContainer.appendChild(projectsElem.createProjDesc(project));
             contentContainer.appendChild(projectsElem.createElem('button', ['cta'], 'Check Availability' ));
             
-
-
             //Images Container
             const slideImages =  projectsElem.createElem("div",['slide-images']);
-            const imagesContainer =  projectsElem.createElem("div",['image-container']);
-            imagesContainer.appendChild(projectsElem.createThumbImg(project));
+            const imagesContainer = (projectsElem.createImageContainer(project, index));
             slideImages.appendChild(imagesContainer);
+
             slideImages.appendChild(projectsElem.createThumbCarousel(project, index));
-            const liElem = projectsElem.createElem("li",['splide__slide', 'slide'], "");
+            const liElem = projectsElem.createElem("li",['splide__slide', 'slide', 'project'], "");
 
             liElem.appendChild(slideImages);
             liElem.appendChild(contentContainer);

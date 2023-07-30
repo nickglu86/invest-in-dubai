@@ -54,12 +54,26 @@ button{
   z-index: 5;
   /* display: flex; */
   height: auto;
-  background-color: #000000d9;
+  background-color: #000000e8;
+}
+#nav .profile{
+   padding-top: 4rem;
+  display: none;
+}
+#nav.open .profile{
+  display: flex;
+  transform: scale(0.85);
+}
+#nav .profile .agent-info img{
+  background-color: transparent;
+}
+#nav .agent-info a{
+  margin: 0;
 }
 #nav .nav-list{
   display:none;
   height: 101vh;
-  padding-top: 6rem;
+  /* padding-top: 6rem; */
 }
 #nav.open .nav-list{
   display:block;
@@ -132,6 +146,10 @@ button{
   #nav{
     background-color: #0000000f;
   }
+  #nav.open .profile{
+    display: none;
+  }
+
   #nav .nav-list{
     display: block;
     height: 4rem;
@@ -331,7 +349,10 @@ section {
   margin: 10px auto;
   padding-bottom: 3rem;
 }
-#projects .content #slider-container .slides-lists .slide{
+#projects #slider-container-list {
+  align-items: flex-start;
+}
+#projects .content #slider-container .slides-lists .project{
   display: flex;
   flex-direction: column;
   padding: 30px 14px;
@@ -339,12 +360,12 @@ section {
   height: fit-content;
   border-radius: 20px;
 }
-#projects .content #slider-container  .asset-info {
+#projects .project  .asset-info {
   /* max-width: 70%; */
   margin: 0 auto;
   text-align: left;
 }
-#projects .slide-content .asset-info .location p {
+#projects .asset-info .location p {
   color: #ffffffc2;
 }
 #projects .asset-info .location,
@@ -377,98 +398,104 @@ section {
   height: 16px;
   background-image: url('/assets/icons/size.png');
 }
-#projects  .image-container {
-  height: 77%;
-  min-height: 210px;
-} 
 
-#projects  .image-container div {
-  height: auto;
-  min-height: 200px;
-  width: 100%;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-}
-/* #projects #slider-container .slide .image-container img{
-  width: 70%;
-} */
 #projects .splide__track.slides-lists{
   border-radius: 20px;
 }
-#projects .slide-content .asset-info span{
+#projects .asset-info span{
   text-decoration: underline;
 }
-#projects .slide-content .asset-info span,
-#projects .slide-content .asset-info p{
+#projects .asset-info span,
+#projects .asset-info p{
   padding: 2px 6px;
-  /* background-color: #fff;
-  color: #000; */
 }
-#projects .slide-content .asset-info .price p {
+#projects  .asset-info .price p {
   font-weight: 700;
   padding-left: 0;
 }
-#projects .slide-content .asset-info p {
+#projects .asset-info p {
   display: inline-block;
   margin: 0.2rem 0 0.6rem;
 }
-#projects .slide-content .asset-desc p {
+#projects .asset-desc p {
   text-align: left;
   font-size: 0.85rem;
 }
-
-#projects .slide-images .images-list ul{
- margin: 10px 0 0;
- display: flex;
-}
-#projects .splide__list {
-  align-items: self-start;
-}
-#projects .splide__track--nav>.splide__list>.splide__slide{
+#projects .project .splide__list li{
   display: flex;
+  justify-content: center;
+  height: 240px;
 }
-#projects .slide-images .images-list img{
+#projects .project  .image-container .splide__slide img {
+  width: 100%;
+  margin: auto;
+  display: block;
+}
+
+#projects .project  .thumbnails {
+  height: auto;
+  margin: 0.5rem auto 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  display: none;
+}
+#projects .project .thumbnail {
+  opacity: 0.3;
+  margin: 0 2px;
+}
+#projects .project .thumbnail.is-active {
+  opacity: 1;
+}
+#projects .project  .thumbnail img {
   width: 100%;
   height: auto;
+  max-height: 50px;
+  cursor: pointer;;
 }
-#projects .images-list .splide__arrow svg{
-  -webkit-filter: invert(100%);
-    filter: invert(100%);
+#projects .project  .image-container .splide__slide img{
+  width: 100%;
 }
-#projects .images-list .splide__arrow{
-  background-color: transparent;
-}
- 
-#projects .images-list  .splide__track  {
-  width: 90%;
-  margin: 0 auto;
-}
+
 #projects #slider-container .slide .slide-content button{
   margin-top: 0.6rem;
 }
 .splide__track--nav>.splide__list>.splide__slide.is-active{
   border: none;
 }
-.splide__arrow--prev, .splide__arrow--next{
-  opacity: 1;
-  top: 35%;
+#projects .project .splide__arrow svg{
+  -webkit-filter: invert(100%);
+    filter: invert(100%);
 }
-.splide__arrow--prev {
-  left: -4vw;
+#projects .project .splide__arrow{
+  background-color: transparent;
+  box-shadow: none;
 }
-.splide__arrow--next{
-  right: -4vw;
-}
-#projects  .images-list .splide__arrow--prev, #projects  .images-list .splide__arrow--next{
+#projects .project  .splide__arrow--prev,
+ #projects .project  .splide__arrow--next{
   opacity: 1;
   top: 50%;
 }
-#projects  .images-list .splide__arrow--prev{
-  left: -1rem;
+.splide__arrow--prev {
+  left: -4vw;
+  top: 34%;
 }
-#projects  .images-list .splide__arrow--next{
-  right: -1rem;
+.splide__arrow--next{
+  right: -4vw;
+  top: 34%;
+}
+#projects .project .splide__arrow--prev, #projects  .project .splide__arrow--next{
+  opacity: 1;
+  top: 42%;
+  transform: scale(1.4);
+}
+#projects .project  .splide__arrow--prev{
+  left: 0rem;
+}
+#projects .project .splide__arrow--next{
+  right: 0rem;
 }
 
 
@@ -563,25 +590,25 @@ section {
   display: block;
   text-align: center;
 }
-#contact .profile{
+ .profile{
   display: flex;
   align-items: center;
 }
-#contact .agent-info{
+.profile .agent-info{
   margin-left: 1rem;
   /* font-size: 1.2rem; */
 }
-#contact .agent-info h3, 
-#contact .agent-info p{
+.profile .agent-info h3, 
+.profile .agent-info p{
   margin: 0.2rem;
   white-space: nowrap;
 }
-#contact .profile img {
+ .profile img {
   width: 6rem;
   height: 6rem;
   border-radius: 50%;
 }
-#contact  .agent-info img {
+.profile .agent-info img {
   width: 70%;
   height: auto;
   border-radius: 2px;
@@ -594,7 +621,6 @@ section {
 #contact .contact-details a{
   text-decoration: none;
   display: block;
-  margin-bottom: 10px;
 }
 #contact .contact-details a img{
   width: 2.8rem;
@@ -628,7 +654,7 @@ section {
   margin-bottom: 10px;
 }
 #contact .contact-details{
-  margin: 1.5rem auto 0;
+  margin: 1rem auto;
 }
 #contact .success,
 #contact .error{
@@ -729,46 +755,41 @@ section {
     max-width: 1040px;
     padding-bottom: 1rem;
   }
-
+  #projects #slider-container-list {
+    align-items: center;
+  }
   #projects .splide__list {
     align-items: initial;
   }
-  #projects .content #slider-container .slides-lists .slide{
+  #projects .project .splide__list li{
+    height: 300px;
+  }
+  #projects .content #slider-container .slides-lists .project{
     flex-direction: row;
     padding: 2.4rem;
     min-height: auto;
   }
   
-  #projects .content #slider-container  .slide-images,
-  #projects .content #slider-container  .slide-content{
+  #projects .project  .slide-images,
+  #projects .project  .slide-content{
     width: 50%;
   }
-  #projects .content #slider-container .slide-content {
+  #projects .project .slide-content {
     width: 50%;
     padding-left: 2rem;
   }
   
-  #projects #slider-container .slide  .images-list {
-    margin: 2rem 0 0;
+  #projects .project  .thumbnails {
+    display: flex;
   }
-  #projects  .image-container {
-    min-height: 300px;
-  } 
-  #projects  .image-container div {
-    height: 100%;
-    min-height: 280px;
-    width: auto;
-  }
-  #projects #slider-container .slide .image-container img {
-    width: 100%;
-  }
-  #projects #slider-container .slide .slide-content h3 {
+
+  #projects .project h3 {
     margin-top: 0;
     margin-bottom: 1rem;
     font-size: 2rem;
     text-align: left;
   }
-  #projects #slider-container .slide .slide-content button{
+  #projects .project .slide-content button{
     float: left;
   }
   .splide__arrow--prev, .splide__arrow--next{
@@ -784,6 +805,7 @@ section {
   #projects  .splide__pagination{
     bottom: -2rem;
   }
+
   /* Advantages Section */
   #advantages .content{
     max-width: 1300px;
@@ -844,7 +866,7 @@ section {
     margin-right: 0;
   }
   #contact .contact-details{
-    margin: 0.8rem 0;
+    margin: 1rem 0;
   }
   #contact .content .form{
     width: 52%;
@@ -852,14 +874,14 @@ section {
     padding: 0 0 0 1.5rem;
   }
   #contact .content .form h2{
-    margin-top: 0.3em;
+    margin-top: 0;
  }
   #contact .content .agent{
     width: 48%;
     min-width: 300px;
     padding: 0 1.5rem 0 0;
   }
-  #contact .profile{
+ .profile{
     margin-bottom: 2rem;
   }
   #contact form button{
