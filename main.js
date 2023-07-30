@@ -56,6 +56,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     splide.mount();
 
+    var thumbnailsWrapper = document.querySelector(
+      ".slide-images #thumbnail-carousel-" + parseInt(i + 1) );
     var thumbnails = document.querySelectorAll(
       ".slide-images #thumbnail-carousel-" + parseInt(i + 1) + " .thumbnail"
     );
@@ -73,6 +75,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     splide.on("mounted move", function () {
       var thumbnail = thumbnails[splide.index];
+      if( splide.index < thumbnails.length - 4 ){
+        thumbnailsWrapper.style =  "transform: translateX(" + splide.index*-82 +  "px)" ;
+      }
 
       if (thumbnail) {
         if (current) {

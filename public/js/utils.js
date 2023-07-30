@@ -100,7 +100,11 @@ export const projectsElem  = {
             const slideImages =  projectsElem.createElem("div",['slide-images']);
             const imagesContainer = (projectsElem.createImageContainer(project, index));
             slideImages.appendChild(imagesContainer);
-            slideImages.appendChild(projectsElem.createThumbCarousel(project, index));
+
+            const thumbWrapper =  projectsElem.createElem("div",['thumb-wrapper']);
+
+            thumbWrapper.appendChild(projectsElem.createThumbCarousel(project, index));
+            slideImages.appendChild(thumbWrapper);
             const liElem = projectsElem.createElem("li",['splide__slide', 'slide', 'project'], "");
 
             //Creating li elem from both containers

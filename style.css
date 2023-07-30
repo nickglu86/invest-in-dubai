@@ -431,19 +431,21 @@ section {
   margin: auto;
   display: block;
 }
-
+.thumb-wrapper {
+  overflow: hidden;
+}
 #projects .project  .thumbnails {
   height: auto;
   margin: 0.5rem auto 0;
   padding: 0;
   display: flex;
   align-items: center;
-  justify-content: center;
-  overflow: hidden;
+  justify-content: start;
+  /* overflow: hidden; */
   display: none;
 }
 #projects .project .thumbnail {
-  opacity: 0.3;
+  opacity: 0.6;
   margin: 0 2px;
 }
 #projects .project .thumbnail.is-active {
@@ -452,8 +454,12 @@ section {
 #projects .project  .thumbnail img {
   width: 100%;
   height: auto;
+  min-width: 50px;
   max-height: 50px;
-  cursor: pointer;;
+  cursor: pointer;
+
+  width: 82px;
+  height: 50px;
 }
 #projects .project  .image-container .splide__slide img{
   width: 100%;
