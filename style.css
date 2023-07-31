@@ -642,12 +642,27 @@ section {
   flex-direction: column;
 }
 #contact .form form input{
-  margin-bottom: 1em;
   border-radius: 5px;
-  height: 1.5em;
+  height: 2rem;
   background-color: #fff;
   color: #251428;
-  padding: 5px 4px;
+  width: 100%;
+}
+
+#contact .form form  .iti {
+  width: 100%;
+  color: #000;
+}
+#contact .form form  .iti .iti-container {
+  width: 3rem;
+}
+#contact .form form  .iti  ul{
+  color: #000;
+    width: 18.7rem;
+    max-height: 160px;
+}
+#contact .form form .input-field{
+  margin-bottom: 1em;
 }
 #contact form button {
   width: 120px;

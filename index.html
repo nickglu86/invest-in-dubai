@@ -35,6 +35,12 @@
   <script src="/js/fullpage-scroll.js"></script>
   <link rel="stylesheet" href="/css/splide.min.css">
   <link rel="stylesheet" href="style.css">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+
 </head>
 
 <body class="fade">
@@ -231,10 +237,17 @@
               </div>
               <form>
                 <h2>Enquiry</h2>
-                <input type="text" id="fname" name="fname" placeholder="Full Name" required>
-                <input type="email" id="email" name="email" placeholder="Email Adress" required>
-                <input type="tel" id="phone" name="phone" placeholder="Phone Number wtih Country Code" required>
-                <input type="text" id="projectn" name="projectn" placeholder="Project I’m intrested In" required>
+                <div class="input-field">
+                  <input type="text" id="fname" name="fname" placeholder="Full Name" required>
+                </div>
+                <div class="input-field">
+                  <input type="email" id="email" name="email" placeholder="Email Adress" required>
+                </div>
+                <div class="input-field">
+                  <input type="tel" id="phone" name="phone" placeholder="Phone Number " required>
+                </div>
+                <div class="input-field">  <input type="text" id="projectn" name="projectn" placeholder="Project I’m intrested In" required>
+                </div>
                 <button type="submit" class="cta">Send</button>
               </form>
             </div>
