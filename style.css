@@ -648,7 +648,12 @@ section {
   color: #251428;
   width: 100%;
 }
-
+#contact .form form input#fname,
+#contact .form form input#email,
+#contact .form form input#projectn{
+  padding-left: 0.5rem;
+  width: calc(100% - 0.5rem);
+}
 #contact .form form  .iti {
   width: 100%;
   color: #000;
@@ -660,6 +665,33 @@ section {
   color: #000;
     width: 18.7rem;
     max-height: 160px;
+    overflow-x: hidden;
+
+}
+ul#iti-0__country-listbox::-webkit-scrollbar-track
+{
+  -webkit-box-shadow: inset 0 0 6px rgba(112, 98, 98, 0.788);
+  background-color: #F5F5F5;
+}
+
+ul#iti-0__country-listbox::-webkit-scrollbar
+{
+  width: 6px;
+  background-color: #F5F5F5;
+ 
+}
+ul#iti-0__country-listbox::-webkit-scrollbar-thumb
+{
+  background-color: #797474;
+  border-radius: 10px;
+}
+
+.iti__country-name {
+  margin-right: 6px;
+  font-size: 0.9rem;
+}
+.iti__dial-code{
+  font-size: 0.9rem;
 }
 #contact .form form .input-field{
   margin-bottom: 1em;
@@ -907,6 +939,9 @@ section {
   }
   #contact form button{
    margin: 0.5rem auto 0 0;
+  }
+  #contact .form form  .iti  ul{
+    width: 16.9rem;
   }
 }
 

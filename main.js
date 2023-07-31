@@ -8,30 +8,45 @@ projectsElem.init(projectsList);
 /* on DOMContentLoaded */
 
 document.addEventListener("DOMContentLoaded", function () {
-  /* Mobile Navigation/Hamburger */
-  const toggleNav = () => {
-    var nav = document.getElementById("nav");
-    nav.className === "topnav"
-      ? (nav.className += " open")
-      : (nav.className = "topnav");
-  };
-  document.querySelector('.mob_menu_btn').addEventListener('click', () => toggleNav());
-  document.querySelector('#nav .nav-list').addEventListener(
-     'click', (elem) => {
-      var nav = document.getElementById("nav");
-       nav.classList.contains('open') ? toggleNav() : null;
-       document.querySelector(elem.target.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth'
-    });
-     }
-  )
 
   /* Section Page Scroll Animation  - fullpage-scroll.js */
   var fps = new FullPageScroll("container", {
     // options here
     mediaQuery: "screen and (min-width: 940px)",
+    goToTopOnLast: false
   });
 
+  document
+  .querySelector("#cover .cta").addEventListener('click', (e) => {
+    e.preventDefault();
+    fps.goToSlide(1)
+  })
+  
+  document
+  .querySelector("#cover .cta").addEventListener('click', (e) => {
+    e.preventDefault();
+    fps.goToSlide(1)
+  })
+
+    /* Mobile Navigation/Hamburger */
+    const toggleNav = () => {
+      var nav = document.getElementById("nav");
+      nav.className === "topnav"
+        ? (nav.className += " open")
+        : (nav.className = "topnav");
+    };
+    document.querySelector('.mob_menu_btn').addEventListener('click', () => toggleNav());
+    document.querySelector('#nav .nav-list').addEventListener(
+       'click', (elem, index) => {
+        var nav = document.getElementById("nav");
+         nav.classList.contains('open') ? toggleNav() : null;
+         fps.goToSlide(index)
+      //    document.querySelector(elem.target.getAttribute('href')).scrollIntoView({
+      //     behavior: 'smooth'
+      // });
+       }
+    )
+  
 
   /*Projects Section Main Gallery/Slider init with SPlide */
   var projectsCarousel = new Splide("#slider-container", {
@@ -104,30 +119,47 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+const phoneInputField = document.querySelector("#phone");
+const phoneInput = window.intlTelInput(phoneInputField, {
+  utilsScript:
+    "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+    separateDialCode: true,
+    autoPlaceholder: 'polite',
+});
+
+
 /* Contact Form handler */
 const contactForm = document.querySelector("form");
 
 contactForm.addEventListener("submit", async (e) => {
   e.preventDefault();
-  showSpinner();
+  // showSpinner();
+  const fullNumber = phoneInput.getNumber();
+  // document.getElementById('phone').setAttribute('value', fullNumber);
+  // const latestData = document.querySelector("form");
   const data = new FormData(contactForm);
+  data.set('phone', fullNumber)
+ 
 
-  fetch("https://getform.io/f/08457ad4-8255-422a-8649-b883fb3011d1", {
-    method: "POST",
-    body: data,
-    headers: {
-      Accept: "application/json",
-    },
-  })
-    .then((response) => {
-      if (response.ok) {
-        formSuccess();
-      }
-    })
-    .catch((error) => {
-      formError();
-      console.log(error);
-    });
+  for (const value of data.values()) {
+    console.log(value);
+  }
+  // fetch("https://getform.io/f/08457ad4-8255-422a-8649-b883fb3011d1", {
+  //   method: "POST",
+  //   body: data,
+  //   headers: {
+  //     Accept: "application/json",
+  //   },
+  // })
+  //   .then((response) => {
+  //     if (response.ok) {
+  //       formSuccess();
+  //     }
+  //   })
+  //   .catch((error) => {
+  //     formError();
+  //     console.log(error);
+  //   });
 });
 
 const formElem = document.querySelector(".form form");
@@ -182,8 +214,3 @@ for (let i = 0; i < items.length; i++) {
   io2.observe(items[i]);
 }
 
-const phoneInputField = document.querySelector("#phone");
-const phoneInput = window.intlTelInput(phoneInputField, {
-  utilsScript:
-    "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
-});
