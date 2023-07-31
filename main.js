@@ -19,14 +19,11 @@ document.addEventListener("DOMContentLoaded", function () {
   document
   .querySelector("#cover .cta").addEventListener('click', (e) => {
     e.preventDefault();
-    fps.goToSlide(1)
+    const devsSection = document.getElementById("developers");
+    devsSection.scrollIntoView();
   })
   
-  document
-  .querySelector("#cover .cta").addEventListener('click', (e) => {
-    e.preventDefault();
-    fps.goToSlide(1)
-  })
+ 
 
     /* Mobile Navigation/Hamburger */
     const toggleNav = () => {

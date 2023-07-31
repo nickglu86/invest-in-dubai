@@ -960,7 +960,7 @@ ul#iti-0__country-listbox::-webkit-scrollbar-thumb
   }
 }
 @media (max-aspect-ratio: 10/8) {
-  #advantages, #developers, #projects{
+  #advantages, #developers{
     background-size: auto 100% ;
   }
 }
