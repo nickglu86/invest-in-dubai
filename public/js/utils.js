@@ -1,4 +1,4 @@
-export const projectsElem  = {
+const projectsElem  = {
       //Create element - Type, classes, content
       createElem : (type, classes = null, content= null) => {
             const elem = document.createElement(type);
@@ -116,3 +116,32 @@ export const projectsElem  = {
       }
 
 }
+
+const formElem = document.querySelector(".form form");
+const spinner = document.querySelector(".spinner");
+const successElem = document.querySelector(".form .success");
+const errorElem = document.querySelector(".form .error");
+
+const showSpinner = () => {
+  formElem.style.display = "none";
+  spinner.style.display = "flex";
+};
+
+const formSuccess = () => {
+  spinner.style.display = "none";
+  successElem.style.display = "block";
+};
+
+const formError = () => {
+  spinner.style.display = "none";
+  errorElem.style.display = "block";
+};
+
+const tryAgain = () => {
+  errorElem.style.display = "none";
+  const contactForm = document.querySelector("form");
+  contactForm.reset();
+  formElem.style.display = "flex";
+};
+
+export { projectsElem , showSpinner, formSuccess, formError, tryAgain};
