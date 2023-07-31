@@ -663,10 +663,12 @@ section {
 }
 #contact .form form  .iti  ul{
   color: #000;
-    width: 18.7rem;
-    max-height: 160px;
-    overflow-x: hidden;
-
+  width: 18.7rem;
+  max-height: 160px;
+  overflow-x: hidden;
+}
+.iti-mobile .iti__country-list{
+  color: #000;
 }
 ul#iti-0__country-listbox::-webkit-scrollbar-track
 {
@@ -957,23 +959,13 @@ ul#iti-0__country-listbox::-webkit-scrollbar-thumb
     background-size: 100%;
   }
 }
-/* @media (min-aspect-ratio: 6/5) {
-  
-  #cover{
-    background-size: 100%;
-  }
-} */
 @media (max-aspect-ratio: 10/8) {
-  #advantages, #developers{
+  #advantages, #developers, #projects{
     background-size: auto 100% ;
-  }
-  #projects{
-    background-size: 100% 100% ;
   }
 }
 @media (min-aspect-ratio: 19/10) {
   #cover{
-    /* background-position: center -35vh; */
     background-position: bottom -31vh center;
   }
   #projects, #advantages, #developers{

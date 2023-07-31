@@ -133,33 +133,27 @@ const contactForm = document.querySelector("form");
 
 contactForm.addEventListener("submit", async (e) => {
   e.preventDefault();
-  // showSpinner();
+
   const fullNumber = phoneInput.getNumber();
-  // document.getElementById('phone').setAttribute('value', fullNumber);
-  // const latestData = document.querySelector("form");
   const data = new FormData(contactForm);
   data.set('phone', fullNumber)
  
-
-  for (const value of data.values()) {
-    console.log(value);
-  }
-  // fetch("https://getform.io/f/08457ad4-8255-422a-8649-b883fb3011d1", {
-  //   method: "POST",
-  //   body: data,
-  //   headers: {
-  //     Accept: "application/json",
-  //   },
-  // })
-  //   .then((response) => {
-  //     if (response.ok) {
-  //       formSuccess();
-  //     }
-  //   })
-  //   .catch((error) => {
-  //     formError();
-  //     console.log(error);
-  //   });
+  fetch("https://getform.io/f/08457ad4-8255-422a-8649-b883fb3011d1", {
+    method: "POST",
+    body: data,
+    headers: {
+      Accept: "application/json",
+    },
+  })
+    .then((response) => {
+      if (response.ok) {
+        formSuccess();
+      }
+    })
+    .catch((error) => {
+      formError();
+      console.log(error);
+    });
 });
 
 const formElem = document.querySelector(".form form");
