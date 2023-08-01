@@ -1,6 +1,12 @@
-// import './style.css'
 import { projectsList } from "./public/data/projects";
 import { projectsElem, showSpinner, formSuccess, formError, tryAgain } from "./public/js/utils";
+
+/* CONSTS */
+const scrollBehavior =  { behavior: 'smooth'};
+const slideImgsSelectorPrefix = ".slide-images #thumbnail-carousel-";
+const getFormEndpoint = "https://getform.io/f/08457ad4-8255-422a-8649-b883fb3011d1";
+const utilScriptJS  =" https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js";
+
 
 /* Initialization of Projects Content Elements */
 projectsElem.init(projectsList);
@@ -15,48 +21,37 @@ document.addEventListener("DOMContentLoaded", function () {
     goToTopOnLast: false,
   });
 
-
-  /* Event Listener for CTA buttons */
+  /* ScroolTo event Handlers for CTA buttons */
   document.querySelector("#cover .cta").addEventListener("click", (e) => {
     e.preventDefault();
     const devsSection = document.getElementById("developers");
-    devsSection.scrollIntoView();
+    devsSection.scrollIntoView(scrollBehavior);
   });
 
-  document
-    .querySelectorAll("#projects .slide-content button")
+  document.querySelectorAll("#projects .slide-content button")
     .forEach((ctaButtonsList) => {
       ctaButtonsList.addEventListener("click", (cta) => {
-        const projectTitle =
-          cta.target.parentElement.getElementsByTagName("h3")[0].innerHTML;
-        document.querySelector("#contact #projectn").value =
-          "Interested in " + projectTitle;
-        const contactSection = document.getElementById("contact");
-        contactSection.scrollIntoView();
+        const projectTitle = cta.target.parentElement.getElementsByTagName("h3")[0].innerHTML;
+        document.querySelector("#contact #projectn").value = "I'm interested in " + projectTitle;
+        document.getElementById("contact").scrollIntoView(scrollBehavior);
       });
     });
   });
 
-  /* Mobile Navigation/Hamburger */
+  /* Navigation + Hamburget / Mobile Nav Behavior */
   const toggleNav = () => {
-    let nav = document.getElementById("nav");
-    nav.className === "topnav"
-      ? (nav.className += " open")
-      : (nav.className = "topnav");
+    const nav = document.getElementById("nav");
+    nav.className === "topnav" ? (nav.className += " open") : (nav.className = "topnav");
   };
-  document
-    .querySelector(".mob_menu_btn")
-    .addEventListener("click", () => toggleNav());
-  document
-    .querySelector("#nav .nav-list")
-    .addEventListener("click", event => {
-      let nav = document.getElementById("nav");
-      nav.classList.contains("open") ? toggleNav() : null;
+  document.querySelector(".mob_menu_btn").addEventListener("click", () => toggleNav());
+  document.querySelector("#nav .nav-list").addEventListener("click", event => {
+      document.getElementById("nav").classList.contains("open") ? toggleNav() : null;
+      const hrefAttr = document.querySelector("#container " + event.target.getAttribute('href'));
+      hrefAttr ? hrefAttr.scrollIntoView(scrollBehavior) : null;
+  });
 
-      const goTo = document.querySelector("#container " + event.target.getAttribute('href'))
-      goTo.scrollIntoView({ behavior: 'smooth'});
-    });
 
+  /** SPLIDE CAROUSEL INITs **/
   /*Projects Section Main Gallery/Slider init with SPlide */
   let projectsCarousel = new Splide("#slider-container", {
     perPage: 1,
@@ -65,10 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
   projectsCarousel.mount();
 
   /*Projects Thumbnails Containerslist initialization with Splide */
-  const mainImageContainers = document.querySelectorAll(
-    ".slide-images .image-container"
-  );
-
+  const mainImageContainers = document.querySelectorAll(".slide-images .image-container");
   mainImageContainers.forEach((elem, i) => {
     let splide = new Splide(
       ".slide-images #image-container-" + parseInt(i + 1),
@@ -80,54 +72,52 @@ document.addEventListener("DOMContentLoaded", function () {
 
     splide.mount();
 
-    let thumbnailsWrapper = document.querySelector(
-      ".slide-images #thumbnail-carousel-" + parseInt(i + 1)
-    );
-    let thumbnails = document.querySelectorAll(
-      ".slide-images #thumbnail-carousel-" + parseInt(i + 1) + " .thumbnail"
-    );
+    let thumbnailsWrapper = document.querySelector(slideImgsSelectorPrefix + parseInt(i + 1) );
+    let thumbnails = document.querySelectorAll(slideImgsSelectorPrefix + parseInt(i + 1) + " .thumbnail");
     let current;
-
-    for (let i = 0; i < thumbnails.length; i++) {
-      initThumbnail(thumbnails[i], i);
-    }
-
-    function initThumbnail(thumbnail, index) {
+    const initThumbnail = (thumbnail, index) => {
       thumbnail.addEventListener("click", function () {
         splide.go(index);
       });
     }
+    
+    for (let i = 0; i < thumbnails.length; i++) {
+      initThumbnail(thumbnails[i], i);
+    }
+
+
 
     splide.on("mounted move", function () {
       let thumbnail = thumbnails[splide.index];
-      if (splide.index < thumbnails.length - 4) {
+      let offset =   thumbnail.offsetWidth ?  thumbnail.offsetWidth  : '80';
+      if (splide.index < thumbnails.length - 5) {
         thumbnailsWrapper.style =
-          "transform: translateX(" + splide.index * -82 + "px)";
+          "transform: translateX(" + splide.index * -offset + "px)";
       }
-
       if (thumbnail) {
         if (current) {
           current.classList.remove("is-active");
         }
-
         thumbnail.classList.add("is-active");
         current = thumbnail;
       }
     });
   });
+  /** SPLIDE CAROUSEL INITs  END**/
 
 
 /** International Tel Input */
 const phoneInputField = document.querySelector("#phone");
 const phoneInput = window.intlTelInput(phoneInputField, {
-  utilsScript:
-    "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+  utilsScript: utilScriptJS,
   separateDialCode: true,
   autoPlaceholder: "polite",
 });
 
-/* Contact Form handler */
+/* Contact Form Handler */
 const contactForm = document.querySelector("form");
+const tryAgainBtn = document.querySelector(".form .error button");
+tryAgainBtn.addEventListener("click", tryAgain);
 
 contactForm.addEventListener("submit", async (e) => {
   e.preventDefault();
@@ -136,7 +126,7 @@ contactForm.addEventListener("submit", async (e) => {
   const data = new FormData(contactForm);
   data.set("phone", fullNumber);
 
-  fetch("https://getform.io/f/08457ad4-8255-422a-8649-b883fb3011d1", {
+  fetch(getFormEndpoint , {
     method: "POST",
     body: data,
     headers: {
@@ -157,12 +147,7 @@ contactForm.addEventListener("submit", async (e) => {
 });
 
 
-const tryAgainBtn = document.querySelector(".form .error button");
-tryAgainBtn.addEventListener("click", tryAgain);
-
-
 /** FADE IN ANIMATION  **/
-
 /* Page fade anim effect in load on DOM Content Loaded */
 document.addEventListener("DOMContentLoaded", () => {
   window.setTimeout(function () {
