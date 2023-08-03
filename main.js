@@ -15,11 +15,11 @@ projectsElem.init(projectsList);
 document.addEventListener("DOMContentLoaded", function () {
 
   /* Section Page Scroll Animation  - fullpage-scroll.js */
-  let fps = new FullPageScroll("container", {
-    // options here
-    mediaQuery: "screen and (min-width: 940px)",
-    goToTopOnLast: false,
-  });
+  // let fps = new FullPageScroll("container", {
+  //   // options here
+  //   mediaQuery: "screen and (min-width: 940px)",
+  //   goToTopOnLast: false,
+  // });
 
   /* ScroolTo event Handlers for CTA buttons */
   document.querySelector("#cover .cta").addEventListener("click", (e) => {

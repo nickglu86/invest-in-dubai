@@ -979,8 +979,11 @@ ul#iti-0__country-listbox::-webkit-scrollbar-thumb
 
 /* Background Images Adjustments for Desktop Screens*/
 @media (min-aspect-ratio: 4/5) {
-  #projects, #advantages, #developers{
+  #projects{
     background-size: 100%;
+  }
+ #advantages, #developers{
+    background-size: 115%;
   }
 }
 @media (min-aspect-ratio: 110/85) {
