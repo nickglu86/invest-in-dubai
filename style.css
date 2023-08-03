@@ -338,6 +338,7 @@ section {
 .developers-list .dev-logo-wrapper img{
   width: 100%;
   height: auto;
+  transition: 2s;
 }
 .dev-desc{
   margin: 1rem auto 1rem;

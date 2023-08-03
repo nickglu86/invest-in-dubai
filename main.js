@@ -21,34 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
   //   goToTopOnLast: false,
   // });
 
-  /* ScroolTo event Handlers for CTA buttons */
-  document.querySelector("#cover .cta").addEventListener("click", (e) => {
-    e.preventDefault();
-    const devsSection = document.getElementById("developers");
-    devsSection.scrollIntoView(scrollBehavior);
-  });
 
-  document.querySelectorAll("#projects .slide-content button")
-    .forEach((ctaButtonsList) => {
-      ctaButtonsList.addEventListener("click", (cta) => {
-        const projectTitle = cta.target.parentElement.getElementsByTagName("h3")[0].innerHTML;
-        document.querySelector("#contact #projectn").value = "I'm interested in " + projectTitle;
-        document.getElementById("contact").scrollIntoView(scrollBehavior);
-      });
-    });
-  });
-
-  /* Navigation + Hamburget / Mobile Nav Behavior */
-  const toggleNav = () => {
-    const nav = document.getElementById("nav");
-    nav.className === "topnav" ? (nav.className += " open") : (nav.className = "topnav");
-  };
-  document.querySelector(".mob_menu_btn").addEventListener("click", () => toggleNav());
-  document.querySelector("#nav .nav-list").addEventListener("click", event => {
-      document.getElementById("nav").classList.contains("open") ? toggleNav() : null;
-      const hrefAttr = document.querySelector("#container " + event.target.getAttribute('href'));
-      hrefAttr ? hrefAttr.scrollIntoView(scrollBehavior) : null;
-  });
 
 
   /** SPLIDE CAROUSEL INITs **/
@@ -105,6 +78,45 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   /** SPLIDE CAROUSEL INITs  END**/
 
+  /* ScroolTo event Handlers for CTA buttons */
+  document.querySelector("#cover .cta").addEventListener("click", (e) => {
+    e.preventDefault();
+    const devsSection = document.getElementById("developers");
+    devsSection.scrollIntoView(scrollBehavior);
+  });
+
+  document.querySelectorAll("#developers .cta")
+    .forEach((ctaButtonsList) => {
+      ctaButtonsList.addEventListener("click", (cta) => {
+        const dataProject = cta.target.getAttribute('data-project');
+        const { Move } = projectsCarousel.Components;
+        dataProject === 'Emaar' ? Move.jump(5)   : dataProject === 'SLS'  ? Move.jump(4) :  Move.jump(0);
+        const projectsSection = document.getElementById("projects");
+        projectsSection.scrollIntoView(scrollBehavior);
+      });
+  });
+
+  document.querySelectorAll("#projects .slide-content button.cta")
+    .forEach((ctaButtonsList) => {
+      ctaButtonsList.addEventListener("click", (cta) => {
+        const projectTitle = cta.target.parentElement.getElementsByTagName("h3")[0].innerHTML;
+        document.querySelector("#contact #projectn").value = "I'm interested in " + projectTitle;
+        document.getElementById("contact").scrollIntoView(scrollBehavior);
+      });
+    });
+  });
+
+  /* Navigation + Hamburget / Mobile Nav Behavior */
+  const toggleNav = () => {
+    const nav = document.getElementById("nav");
+    nav.className === "topnav" ? (nav.className += " open") : (nav.className = "topnav");
+  };
+  document.querySelector(".mob_menu_btn").addEventListener("click", () => toggleNav());
+  document.querySelector("#nav .nav-list").addEventListener("click", event => {
+      document.getElementById("nav").classList.contains("open") ? toggleNav() : null;
+      const hrefAttr = document.querySelector("#container " + event.target.getAttribute('href'));
+      hrefAttr ? hrefAttr.scrollIntoView(scrollBehavior) : null;
+  });
 
 /** International Tel Input */
 const phoneInputField = document.querySelector("#phone");

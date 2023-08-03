@@ -58,7 +58,7 @@ export const projectsList = [
       {
             title : '330 Riverside Crescent',
             location: 'SOBHA HARTLAND II',
-            type: ' 1, 1.5 and 2 Bedroom Apartments',
+            type: '1, 1.5 and 2 Bedroom Apartments',
             price: '1.5M AED / 410K USD',
             desc:  [
                   '330 Riverside Crescent is your gateway to a waterfront lifestyle of beauty and tranquility. With 57 stories of exquisite craftsmanship, the tower stands poised offering uninterrupted views of the clear water and riveting illuminations of the city.',
@@ -72,6 +72,31 @@ export const projectsList = [
                   '330-riverside-crescent/overview-2.jpg',
                   '330-riverside-crescent/overview.jpg',
                   '330-riverside-crescent/pool.jpg',
+            ]
+      },
+      {
+            title : 'SLS Dubai',
+            location: 'Burj Khalifa District',
+            type: 'Studio, 1-2 Bedroom Apartments, Lofts & Duplexes',
+            price: '1.3M AED / 353K USD - fraction ownership \n 3M AED / 817K USD - full owenrship',
+            desc: [
+                  'A wondrous and striking landmark in Burj Khalifa District, designed by the award-winning architects Aedas and interior designer Paul Bishop, the SLS Dubai is a unique cabinet of curiosities that never ceases to delight.',
+                  'Boasting 946 units, with 254 uniquely designed hotel rooms, 321 hotel apartments and 371 residences, spread over 75 floors, SLS Dubai will be one of the tallest hotels and residences in the region.'
+            ],
+            thumbnailImg: '',
+            images: [ 
+                  'sls/sls-dubai-cover.jpg',
+                  'sls/sls-dubai-1.jpg',
+                  'sls/sls-dubai-2.jpg',
+                  'sls/sls-dubai-3.jpg',
+                  'sls/sls-dubai-4.jpg',
+                  'sls/sls-dubai-5.jpg',
+                  'sls/sls-dubai-6.jpg',
+                  'sls/sls-dubai-7.jpg',
+                  'sls/sls-dubai-8.jpg',
+                  'sls/sls-dubai-9.jpg',
+                  'sls/sls-dubai-10.jpg',
+                  'sls/sls-dubai-11.jpg',
             ]
       },
       {
