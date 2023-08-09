@@ -1,8 +1,107 @@
-@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&display=swap");
+
+/* Default Font Sizes */
+html {
+  font-size: 17px;
+}
+@media (min-width: 321px) {
+  html {
+    font-size: 18px;
+  }
+}
+@media (min-width: 420px) {
+  html {
+    font-size: 19px;
+  }
+}
+@media (min-width: 481px) {
+  html {
+    font-size: 20px;
+  }
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 19px;
+  }
+}
+@media (min-width: 1024px) {
+  html {
+    font-size: 17px;
+  }
+}
+@media (min-width: 1200px) {
+  html {
+    font-size: 18px;
+  }
+}
+@media (min-width: 1420px) {
+  html {
+    font-size: 19px;
+  }
+}
+@media (min-width: 1540px) {
+  html {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1720px) {
+  html {
+    font-size: 21px;
+  }
+}
 
 body {
-      background-color: #3a2b3c;
-      color: white;
-      font-family: 'Assistant','Montserrat', sans-serif;
-     
+  background-color: #3a2b3c;
+  color: white;
+  font-family: "Assistant", "Montserrat", sans-serif;
+}
+#cover .content p span {
+  display: inline-block;
+}
+#contact .form form {
+  direction: rtl;
+  text-align: right;
+}
+.iti--allow-dropdown .iti__flag-container,
+.iti--separate-dial-code .iti__flag-container {
+  right: 0 !important;
+  left: auto !important;
+}
+#contact .form form input#phone {
+  padding-right: 75px;
+}
+#contact .form form input {
+  padding-right: 0.5rem;
+  padding-left: 0;
+  box-sizing: border-box;
+}
+.agent, form {
+      max-width: 98%;
+      margin: 0 auto;
+  }
+  #contact .content .form {
+      padding: 0;
     }
+    #contact .content .agent {
+      padding: 0;
+    }
+
+@media (min-width: 1024px) {
+  #contact .content .form {
+    padding: 0 2.2rem 0 0;
+  }
+  #contact .content .agent {
+    padding: 0 0 0 2.2rem;
+  }
+  #contact .profile {
+    justify-content: space-between;
+  }
+
+  .profile .agent-info {
+    width: 45%;
+    text-align: center;
+  }
+  #contact .form form input#fname, #contact .form form input#email, #contact .form form input#projectn {
+      width: 100%;
+  }
+}
