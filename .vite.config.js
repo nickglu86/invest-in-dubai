@@ -8,6 +8,9 @@ export default {
     
             // New entry point for Hebrew page
             'il': './index-il.html',
+            'il/index' : './index-il.html',
+            '/il': './index-il.html',
+            'il/': './index-il.html',
           },
         },
       },
