@@ -1,9 +1,5 @@
 [[redirects]]
-from = "/il/*"
+from = "/il"
 to = "/il/index.html"
 status = 200
 force = true
-
-for = "/*"
-  [headers.values]
-  X-Frame-Options = "DENY"
