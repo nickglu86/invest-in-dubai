@@ -123,10 +123,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /** International Tel Input */
 const phoneInputField = document.querySelector("#phone");
+const countryLabel = phoneInputField.getAttribute('data-country')
+
 const phoneInput = window.intlTelInput(phoneInputField, {
   utilsScript: utilScriptJS,
   separateDialCode: true,
   autoPlaceholder: "polite",
+  preferredCountries: countryLabel === "us" ? ['us', 'il']: ['il', 'us'],
 });
 
 /* Contact Form Handler */

@@ -62,30 +62,40 @@ body {
   direction: rtl;
   text-align: right;
 }
-.iti--allow-dropdown .iti__flag-container,
+/* .iti--allow-dropdown .iti__flag-container,
 .iti--separate-dial-code .iti__flag-container {
   right: 0 !important;
   left: auto !important;
-}
-#contact .form form input#phone {
+} */
+/* #contact .form form input#phone {
   padding-right: 75px;
+} */
+.iti--allow-dropdown .iti__flag-container,
+.iti--separate-dial-code .iti__flag-container {
+  direction: ltr !important;
 }
 #contact .form form input {
   padding-right: 0.5rem;
   padding-left: 0;
-  box-sizing: border-box;
 }
-.agent, form {
-      max-width: 98%;
-      margin: 0 auto;
-  }
-  #contact .content .form {
-      padding: 0;
-    }
-    #contact .content .agent {
-      padding: 0;
-    }
+.agent,
+form {
+  max-width: 98%;
+  margin: 0 auto;
+}
+#contact .content .form {
+  padding: 0;
+}
+#contact .content .agent {
+  padding: 0;
+}
 
+.profile .agent-info {
+  width: 45%;
+  text-align: center;
+  text-align: right;
+  margin-right: 2rem;
+}
 @media (min-width: 1024px) {
   #contact .content .form {
     padding: 0 2.2rem 0 0;
@@ -93,15 +103,21 @@ body {
   #contact .content .agent {
     padding: 0 0 0 2.2rem;
   }
-  #contact .profile {
-    justify-content: space-between;
-  }
 
-  .profile .agent-info {
-    width: 45%;
-    text-align: center;
+  #contact .form form input#fname,
+  #contact .form form input#email,
+  #contact .form form input#projectn {
+    width: 100%;
   }
-  #contact .form form input#fname, #contact .form form input#email, #contact .form form input#projectn {
-      width: 100%;
+  #contact .contact-details a:last-child img {
+    margin-left: 0;
+    margin-right: 0.5rem;
+  }
+  #contact .contact-details a:first-child img {
+    margin-right: 0;
+    margin-left: 0.5rem;
+  }
+  #contact .form form input {
+    box-sizing: border-box;
   }
 }
