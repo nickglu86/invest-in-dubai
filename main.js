@@ -83,6 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
     e.preventDefault();
     const devsSection = document.getElementById("developers");
     devsSection.scrollIntoView(scrollBehavior);
+    gtag('event', 'cover-cta-click', {});
   });
 
   document.querySelectorAll("#developers .cta")
@@ -93,6 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
         dataProject === 'Emaar' ? Move.jump(5)   : dataProject === 'SLS'  ? Move.jump(4) :  Move.jump(0);
         const projectsSection = document.getElementById("projects");
         projectsSection.scrollIntoView(scrollBehavior);
+        gtag('event', 'developers-cta-click', { 'dev-name': dataProject});
       });
   });
 
@@ -102,6 +104,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const projectTitle = cta.target.parentElement.getElementsByTagName("h3")[0].innerHTML;
         document.querySelector("#contact #projectn").value = "I'm interested in " + projectTitle;
         document.getElementById("contact").scrollIntoView(scrollBehavior);
+        gtag('event', 'project-cta-click', {'project-name': projectTitle});
       });
     });
   });
@@ -134,6 +137,7 @@ tryAgainBtn.addEventListener("click", tryAgain);
 contactForm.addEventListener("submit", async (e) => {
   e.preventDefault();
   showSpinner();
+  gtag('event', 'form-submited', {});
   const fullNumber = phoneInput.getNumber();
   const data = new FormData(contactForm);
   data.set("phone", fullNumber);
@@ -148,11 +152,13 @@ contactForm.addEventListener("submit", async (e) => {
     .then((response) => {
       if (response.ok) {
         formSuccess();
+        gtag('event', 'lead-confirmed', {});
       }
     })
     .catch((error) => {
       formError();
       console.log(error);
+      gtag('event', 'error-sending-lead', {});
     });
 
  
