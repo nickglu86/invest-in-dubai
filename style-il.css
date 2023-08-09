@@ -58,22 +58,17 @@ body {
 #cover .content p span {
   display: inline-block;
 }
+#cover .content p {
+      font-size: 0.9rem;
+}
+.dev-desc {
+    line-height: 1.26rem;
+}
 #contact .form form {
   direction: rtl;
   text-align: right;
 }
-/* .iti--allow-dropdown .iti__flag-container,
-.iti--separate-dial-code .iti__flag-container {
-  right: 0 !important;
-  left: auto !important;
-} */
-/* #contact .form form input#phone {
-  padding-right: 75px;
-} */
-.iti--allow-dropdown .iti__flag-container,
-.iti--separate-dial-code .iti__flag-container {
-  direction: ltr !important;
-}
+
 #contact .form form input {
   padding-right: 0.5rem;
   padding-left: 0;
@@ -96,7 +91,27 @@ form {
   text-align: right;
   margin-right: 2rem;
 }
+#contact .contact-details a img {
+      width: 2.4rem;
+}
+/* .iti--allow-dropdown .iti__flag-container,
+.iti--separate-dial-code .iti__flag-container {
+  right: 0 !important;
+  left: auto !important;
+} */
+/* #contact .form form input#phone {
+  padding-right: 75px;
+} */
+.iti--allow-dropdown .iti__flag-container,
+.iti--separate-dial-code .iti__flag-container {
+  direction: ltr !important;
+}
+
 @media (min-width: 1024px) {
+      #cover .content p {
+            font-size: 1.1rem;
+            margin: 0.7em 0;
+      }
   #contact .content .form {
     padding: 0 2.2rem 0 0;
   }
@@ -119,5 +134,8 @@ form {
   }
   #contact .form form input {
     box-sizing: border-box;
+  }
+  #contact .contact-details a img {
+      width: 2.8rem;
   }
 }
