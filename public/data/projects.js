@@ -170,7 +170,6 @@ export const projectsList = [
                   '/creek-harbour/creek-edge-2.jpg',
                   '/creek-harbour/creek-edge-3.jpg',
                   '/creek-harbour/creek-gym.jpg',
-                  '/creek-harbour/creek-pool.jpg',
                   '/creek-harbour/creek-palace-1.jpg',
                   '/creek-harbour/creek-palace-2.jpg',
                   '/creek-harbour/creek-surf-1.jpg',

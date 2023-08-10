@@ -158,6 +158,9 @@ input::-webkit-input-placeholder {
     font-size: 1.1rem;
     margin: 0.7em 0;
   }
+  .dev-desc {
+    height: 11rem;
+  }
   #projects .project .slide-content button {
     float: right;
   }

@@ -768,9 +768,11 @@ ul#iti-0__country-listbox::-webkit-scrollbar-thumb
   /* General */
   section {
     height: 100vh;
-    min-height: 700px;
+    min-height: 800px;
   }
-
+  section#developers, section#projects, section#advantages {
+    height: 110vh;
+  }
   h1 {
     font-size: 2.2rem;
   }
@@ -814,6 +816,8 @@ ul#iti-0__country-listbox::-webkit-scrollbar-thumb
 /* Developers Section */
   #developers .content {
     width: 1300px;
+    margin: auto;
+    margin-bottom: 3rem;
   }
   .developers-list{
     flex-direction: row;
@@ -835,7 +839,7 @@ ul#iti-0__country-listbox::-webkit-scrollbar-thumb
 }
   /* Projects Section */
   #projects .content h1{
-    margin: 3rem 0 1rem;
+    margin: 2rem 0 1.5rem;
   }
   #projects .content #slider-container {
     max-width: 64rem;
@@ -895,8 +899,9 @@ ul#iti-0__country-listbox::-webkit-scrollbar-thumb
   /* Advantages Section */
   #advantages .content{
     max-width: 1500px;
-    margin: 5rem auto 0;
-    min-height: 700px;
+    margin: auto;
+    margin-bottom: 3rem;
+    min-height: 800px;
   }
   .advantages-list{
     flex-direction: row;

@@ -105,7 +105,7 @@ export const projectsList = [
             type: 'דירות עם 1, 2, 3 ו-4 חדרי שינה, בתי עיר ופנטהאוזים',
             price: '1.7M AED / 462K USD',
             desc: [
-                  'שילוב של ארכיטקטורה מודרנית עם גינון חדשני, קריק ווטרס מציב סטנדרט חדש לחוויית המגורים הגבוהה באי',
+                  'שילוב של ארכיטקטורה מודרנית עם גינון חדשני, קריק ווטרס מציב סטנדרט חדש לחוויית המגורים הגבוהה באי.',
                   'מקלט טבעי בלב הפנים האורבניות החדשות של דובאי קריק. מתוחכם בעיצוב האורבני שלו, קריק ווטרס מדגים את הרעיון של איחוד במקום אחד את התכונות הטובות ביותר של אזורי מגורים יוקרתיים, ומתגאה בו זמנית בכמה מהנופים הטובים ביותר בכל אזור דובאי קריק.'],
             thumbnailImg: 'creek-waters/cover.jpg',
             images: [ 
@@ -170,7 +170,6 @@ export const projectsList = [
                   '/creek-harbour/creek-edge-2.jpg',
                   '/creek-harbour/creek-edge-3.jpg',
                   '/creek-harbour/creek-gym.jpg',
-                  '/creek-harbour/creek-pool.jpg',
                   '/creek-harbour/creek-palace-1.jpg',
                   '/creek-harbour/creek-palace-2.jpg',
                   '/creek-harbour/creek-surf-1.jpg',
