@@ -1,12 +1,12 @@
-
-import { showSpinner, formSuccess, formError, tryAgain } from "./public/js/utils";
+import { projectsElem, showSpinner, formSuccess, formError, tryAgain } from "./public/js/utils";
+import { projectsList as projectsListIL } from "./public/data/projects-il";
+import { projectsList } from "./public/data/projects";
 
 /* CONSTS */
 const scrollBehavior =  { behavior: 'smooth'};
 const slideImgsSelectorPrefix = ".slide-images #thumbnail-carousel-";
 const getFormEndpoint = "https://getform.io/f/08457ad4-8255-422a-8649-b883fb3011d1";
 const utilScriptJS  =" https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js";
-
 
 /* on DOMContentLoaded */
 document.addEventListener("DOMContentLoaded", function () {
@@ -17,6 +17,10 @@ document.addEventListener("DOMContentLoaded", function () {
   //   mediaQuery: "screen and (min-width: 940px)",
   //   goToTopOnLast: false,
   // });
+
+/* Initialization of Projects Content Elements */
+const lang = document.documentElement.lang;
+lang === 'en' ? projectsElem.init(projectsList, 'us') : projectsElem.init(projectsListIL, 'il');
 
 
   /** SPLIDE CAROUSEL INITs **/
