@@ -8,8 +8,6 @@ const getFormEndpoint = "https://getform.io/f/08457ad4-8255-422a-8649-b883fb3011
 const utilScriptJS  =" https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js";
 
 
-
-
 /* on DOMContentLoaded */
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -19,8 +17,6 @@ document.addEventListener("DOMContentLoaded", function () {
   //   mediaQuery: "screen and (min-width: 940px)",
   //   goToTopOnLast: false,
   // });
-
-
 
 
   /** SPLIDE CAROUSEL INITs **/
@@ -101,7 +97,8 @@ document.addEventListener("DOMContentLoaded", function () {
     .forEach((ctaButtonsList) => {
       ctaButtonsList.addEventListener("click", (cta) => {
         const projectTitle = cta.target.parentElement.getElementsByTagName("h3")[0].innerHTML;
-        document.querySelector("#contact #projectn").value = "I'm interested in " + projectTitle;
+        const langAttr = cta.target.getAttribute('lang');
+        document.querySelector("#contact #projectn").value = langAttr === 'us' ? "I'm interested in " + projectTitle :    'אני מעוניין ב' + projectTitle ;
         document.getElementById("contact").scrollIntoView(scrollBehavior);
         gtag('event', 'project-cta-click', {'project-name': projectTitle});
       });
@@ -144,6 +141,7 @@ contactForm.addEventListener("submit", async (e) => {
   const data = new FormData(contactForm);
   data.set("phone", fullNumber);
 
+ 
   fetch(getFormEndpoint , {
     method: "POST",
     body: data,

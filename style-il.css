@@ -84,6 +84,7 @@ body {
   left: none;
 }
 #projects .asset-desc p {
+  direction: rtl;
   text-align: right;
   font-size: 0.92rem;
 }

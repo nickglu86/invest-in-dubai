@@ -735,6 +735,9 @@ ul#iti-0__country-listbox::-webkit-scrollbar-thumb
   display: none;
   margin-top: 1rem;
   min-height: 7rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 #contact .success h4,
 #contact .error h4{

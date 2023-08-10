@@ -94,7 +94,9 @@ const projectsElem  = {
             contentContainer.appendChild(titleElem);
             contentContainer.appendChild(projectsElem.createProjectInfo(project, lang));
             contentContainer.appendChild(projectsElem.createProjDesc(project));
-            contentContainer.appendChild(projectsElem.createElem('button', ['cta'], lang === 'us' ? 'Check Availability': "בדוק זמינות" ));
+            const ctaButton = projectsElem.createElem('button', ['cta'], lang === 'us' ? 'Check Availability': "בדוק זמינות" );
+            ctaButton.setAttribute('lang', lang);
+            contentContainer.appendChild(ctaButton);
             
             //Images Container
             const slideImages =  projectsElem.createElem("div",['slide-images']);
@@ -129,12 +131,12 @@ const showSpinner = () => {
 
 const formSuccess = () => {
   spinner.style.display = "none";
-  successElem.style.display = "block";
+  successElem.style.display = "flex";
 };
 
 const formError = () => {
   spinner.style.display = "none";
-  errorElem.style.display = "block";
+  errorElem.style.display = "flex";
 };
 
 const tryAgain = () => {
