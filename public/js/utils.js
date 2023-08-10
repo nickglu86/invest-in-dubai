@@ -7,14 +7,14 @@ const projectsElem  = {
             return elem;
       },
       //Create eeProjectInfo ontainer
-      createProjectInfo : ({location, price, type}) => {
+      createProjectInfo : ({location, price, type}, lang) => {
             //Create location  
             const locationElem = projectsElem.createElem("div",['location']);
             const locationpElem = projectsElem.createElem("p",null,location);
             locationElem.appendChild(locationpElem);
             //Create Prive  
             const priceElem = projectsElem.createElem("div",['price']);
-            const priceSElem = projectsElem.createElem("span",null,'Starting Price:');
+            const priceSElem = projectsElem.createElem("span",null, lang === 'us' ? 'Starting Price:': "מחיר התחלתי:" );
             priceElem.appendChild(priceSElem);
             const pricePElem = projectsElem.createElem("p",null, price);
             priceElem.appendChild(pricePElem);
@@ -84,7 +84,7 @@ const projectsElem  = {
 
       },
       //Create and Initialize Projects List
-      init : projectList => {
+      init : (projectList, lang) => {
         const sliderTrack = document.querySelector('#slider-container .splide__track.slides-lists');
         let domElem = projectsElem.createElem('ul',['splide__list']);
          projectList.forEach((project, index) => {
@@ -92,9 +92,9 @@ const projectsElem  = {
             const contentContainer = projectsElem.createElem("div",['slide-content']);
             const titleElem  = projectsElem.createElem('h3',null,project.title);
             contentContainer.appendChild(titleElem);
-            contentContainer.appendChild(projectsElem.createProjectInfo(project));
+            contentContainer.appendChild(projectsElem.createProjectInfo(project, lang));
             contentContainer.appendChild(projectsElem.createProjDesc(project));
-            contentContainer.appendChild(projectsElem.createElem('button', ['cta'], 'Check Availability' ));
+            contentContainer.appendChild(projectsElem.createElem('button', ['cta'], lang === 'us' ? 'Check Availability': "בדוק זמינות" ));
             
             //Images Container
             const slideImages =  projectsElem.createElem("div",['slide-images']);

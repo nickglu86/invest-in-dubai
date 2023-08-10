@@ -1,5 +1,5 @@
-import { projectsList } from "./public/data/projects";
-import { projectsElem, showSpinner, formSuccess, formError, tryAgain } from "./public/js/utils";
+
+import { showSpinner, formSuccess, formError, tryAgain } from "./public/js/utils";
 
 /* CONSTS */
 const scrollBehavior =  { behavior: 'smooth'};
@@ -8,8 +8,7 @@ const getFormEndpoint = "https://getform.io/f/08457ad4-8255-422a-8649-b883fb3011
 const utilScriptJS  =" https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js";
 
 
-/* Initialization of Projects Content Elements */
-projectsElem.init(projectsList);
+
 
 /* on DOMContentLoaded */
 document.addEventListener("DOMContentLoaded", function () {

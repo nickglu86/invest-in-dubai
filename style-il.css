@@ -59,10 +59,37 @@ body {
   display: inline-block;
 }
 #cover .content p {
-      font-size: 0.9rem;
+  font-size: 0.9rem;
 }
 .dev-desc {
-    line-height: 1.26rem;
+  line-height: 1.26rem;
+}
+#projects .project h3 {
+  text-align: center;
+}
+#projects .project .asset-info {
+  text-align: right;
+  direction: rtl;
+}
+#projects .asset-info .location,
+#projects .asset-info .price,
+#projects .asset-info .type {
+  padding-left: 0;
+  padding-right: 20px;
+}
+#projects .asset-info .location::before,
+#projects .asset-info .price::before,
+#projects .asset-info .type::before {
+  right: 0;
+  left: none;
+}
+#projects .asset-desc p {
+  text-align: right;
+  font-size: 0.92rem;
+}
+#projects .asset-info .price span {
+  float: right;
+  margin-top: 0.1rem;
 }
 #contact .form form {
   direction: rtl;
@@ -84,15 +111,29 @@ form {
 #contact .content .agent {
   padding: 0;
 }
-
-.profile .agent-info {
-  width: 45%;
-  text-align: center;
-  text-align: right;
-  margin-right: 2rem;
+#contact .profile {
+  justify-content: center;
 }
+#contact .profile .agent-info {
+  width: 40%;
+  text-align: center;
+  /* text-align: right;
+  margin-right: 2rem; */
+}
+#contact .adress {
+  text-align: center;
+}
+
 #contact .contact-details a img {
-      width: 2.4rem;
+  width: 2.4rem;
+}
+/* #contact .form form input#fname, #contact .form form input#email, #contact .form form input#projectn {
+  padding-right: 0;
+} */
+
+input::-webkit-input-placeholder {
+  font-size: 1rem;
+  line-height: 1.6rem;
 }
 /* .iti--allow-dropdown .iti__flag-container,
 .iti--separate-dial-code .iti__flag-container {
@@ -108,10 +149,13 @@ form {
 }
 
 @media (min-width: 1024px) {
-      #cover .content p {
-            font-size: 1.1rem;
-            margin: 0.7em 0;
-      }
+  #cover .content p {
+    font-size: 1.1rem;
+    margin: 0.7em 0;
+  }
+  #projects .project .slide-content button {
+    float: right;
+  }
   #contact .content .form {
     padding: 0 2.2rem 0 0;
   }
@@ -136,6 +180,6 @@ form {
     box-sizing: border-box;
   }
   #contact .contact-details a img {
-      width: 2.8rem;
+    width: 2.8rem;
   }
 }
