@@ -11,13 +11,6 @@ const utilScriptJS  =" https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.
 /* on DOMContentLoaded */
 document.addEventListener("DOMContentLoaded", function () {
 
-  /* Section Page Scroll Animation  - fullpage-scroll.js */
-  // let fps = new FullPageScroll("container", {
-  //   // options here
-  //   mediaQuery: "screen and (min-width: 940px)",
-  //   goToTopOnLast: false,
-  // });
-
 /* Initialization of Projects Content Elements */
 // const lang = document.documentElement.lang;
 // lang === 'en' ? projectsElem.init(projectsList, 'us') : projectsElem.init(projectsListIL, 'il');
