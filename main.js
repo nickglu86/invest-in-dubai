@@ -19,8 +19,8 @@ document.addEventListener("DOMContentLoaded", function () {
   // });
 
 /* Initialization of Projects Content Elements */
-const lang = document.documentElement.lang;
-lang === 'en' ? projectsElem.init(projectsList, 'us') : projectsElem.init(projectsListIL, 'il');
+// const lang = document.documentElement.lang;
+// lang === 'en' ? projectsElem.init(projectsList, 'us') : projectsElem.init(projectsListIL, 'il');
 
 
   /** SPLIDE CAROUSEL INITs **/
